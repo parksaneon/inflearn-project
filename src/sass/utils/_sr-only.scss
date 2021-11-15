@@ -1,6 +1,6 @@
 // 접근성 관련
 // 숨김 제목 및 콘텐츠 --------------------------------------------------------------- /
-@mixin a11yHidden() {
+@mixin srOnly() {
   overflow: hidden;
   position: absolute !important;
   clip: rect(0, 0, 0, 0);
@@ -11,6 +11,6 @@
 }
 
 // 숨김 콘텐츠 -------------------------------------------------------------------- /
-.a11yHidden {
-  @include a11yHidden();
+.sr-only {
+  @include srOnly();
 }

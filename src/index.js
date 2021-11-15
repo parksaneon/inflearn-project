@@ -1,4 +1,3 @@
-import './style.scss';
-import './index.css';
+import './sass/index.scss';
 
 console.log('hello');

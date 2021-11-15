@@ -3,19 +3,20 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
 
+const webpackMode = process.env.NODE_ENV;
 const PRODUCTION = 'production';
 const DEVELOPMENT = 'development';
-const webpackMode = process.env.NODE_ENV || DEVELOPMENT;
 
 module.exports = {
   mode: webpackMode,
   entry: {
-    index: './src/index.js',
+    main: './src/main.js',
   },
   output: {
     path: path.resolve('./dist'),
-    filename: '[name].min.js',
+    filename: '[name].js',
   },
   optimization: {
     minimizer:
@@ -31,7 +32,6 @@ module.exports = {
           ]
         : [],
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -40,17 +40,15 @@ module.exports = {
       filename: 'index.css',
     }),
     new CleanWebpackPlugin(),
+    new CopyWebPackPlugin({
+      patterns: [{ from: './src/images', to: './images' }],
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.s?css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-          'postcss-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
       },
     ],
   },
@@ -59,7 +57,8 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist'),
     },
     port: 8080,
+    liveReload: true,
   },
   // development only
-  devtool: webpackMode === DEVELOPMENT ? 'source-map' : '',
+  devtool: webpackMode === DEVELOPMENT ? 'source-map' : false,
 };

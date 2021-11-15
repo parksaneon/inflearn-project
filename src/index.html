@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
-    <title>인프런</title>
-  </head>
-  <body>
-    asdfasdfdsfd
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <title>인프런</title>
+</head>
+
+<body>
+  <section>
+    <div>
+      <h3>독서의 계절, 가을엔 강의 한편</h3>
+      <p>붙잡고 싶은 가을,인프런과 함께해요.</p>
+    </div>
+  </section>
+  <section>
+    <ul>
+      <li><a>독서의 계절</a></li>
+      <li><a>신규 강의</a></li>
+      <li><a>나에게 맞는 강의</a></li>
+      <li><a>인프런은</a></li>
+      <li><a>인프런 동료 찾기</a></li>
+    </ul>
+    <button> 이벤트 더 보기 </button>
+    <!--  더보기 진행 중인 이벤트 -->
+    <div>
+      <h3>진행중인 모든 이벤트</h3>
+      <a href="#">닫기</a>
+      <ul>
+        <li><a>독서의 계절</a></li>
+        <li><a>신규 강의</a></li>
+        <li><a>나에게 맞는 강의</a></li>
+        <li><a>인프런은</a></li>
+        <li><a>인프런 동료 찾기</a></li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
+      <fieldset>
+        <legend>검색 폼</legend>
+        <label for="search" class="icon-search">인프런에서 연봉을 올리세요.</label>
+        <input type="search" id="search" name="search" placeholder="배우고싶은 지식을 입력해보세요">
+        <button type="submit" class="button-search"><i class="fas fa-search"></i></button>
+      </fieldset>
+    </form>
+  </section>
+  <section>
+    <ul>
+      <li><a href="#">#MVC</a></li>
+      <li><a href="#">#Spring Boot</a></li>
+      <li><a href="#">#Back-end</a></li>
+      <li><a href="#">#JPA</a></li>
+      <li><a href="#">#Front-End</a></li>
+      <li><a href="#">#Python</a></li>
+      <li><a href="#">#Java</a></li>
+      <li><a href="#">#Spring</a></li>
+      <li><a href="#">#게임개발</a></li>
+      <li><a href="#">#JavaScript</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>로그인</h2>
+    <img src="#" alt="인프런 로고" title="인프런 로고">
+    <form action="#" method="get">
+      <fieldset>
+        <legend>로그인</legend>
+        <div>
+          <input type="email" name="id" required>
+          <label>이메일 또는 아이디 입력</label>
+        </div>
+        <div>
+          <input type="password" name="password" required>
+          <label>비밀번호</label>
+          <button type="button">눈알</button>
+        </div>
+        <button type="submit">로그인</button>
+      </fieldset>
+    </form>
+    <div>
+      <a href="#">비밀번호 찾기</a>
+      <a href="#">회원가입</a>
+    </div>
+    <div>
+      <p>간편로그인</p>
+      <a href="#"> 카카오톡</a>
+      <a href="#">구글</a>
+      <a href="#">깃허브</a>
+      <a href="#">페이스북</a>
+      <a href="#">애플</a>
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
 </html>

@@ -1,1 +1,17 @@
+<<<<<<< HEAD
 @forward './header';
+=======
+@forward './entry_lecture';
+@use '../utils/' as *;
+
+main {
+  @include mobile {
+    padding: 1rem;
+  }
+  .main-container {
+    width: 100%;
+    max-width: rem(1171px);
+    margin: 0 auto;
+  }
+}
+>>>>>>> 3854263831fa54dbc5d740f24e1f52d97b0c5f32

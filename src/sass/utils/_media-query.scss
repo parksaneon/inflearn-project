@@ -69,3 +69,15 @@ $break: 1000px;
     @content;
   }
 }
+
+.mobile-only {
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include mobile {
+    display: none;
+  }
+}

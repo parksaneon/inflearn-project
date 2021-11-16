@@ -1,7 +1,5 @@
 import './sass/index.scss';
 
-console.log('hello');
-
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const header = document.querySelector('.header');

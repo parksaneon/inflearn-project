@@ -66,11 +66,17 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin positionY($top: 50%, $translateY: -50%, $transform) {
+@mixin positionY($top: 50%, $translateY: -50%, $transform: none) {
   position: absolute;
   top: $top;
   left: 0;
   transform: translateY($translateY) $transform;
+}
+
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 // Width, Height 관련 믹스인

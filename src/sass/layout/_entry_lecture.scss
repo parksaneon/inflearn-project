@@ -1,0 +1,29 @@
+@import '../utils/';
+
+.entry-lectures {
+  &__title {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .title-tag {
+    color: $orange;
+    font-size: rem(12px);
+    font-weight: 700;
+    margin-right: rem(8px);
+  }
+
+  .fas {
+    font-size: rem(16px);
+  }
+
+  .description {
+    display: block;
+    margin-bottom: 1rem;
+    color: $gray200;
+    font-size: rem(15px);
+  }
+}

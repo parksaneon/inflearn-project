@@ -4,6 +4,8 @@
   width: 100%;
   background-color: indigo;
   display: flex;
+  // justify-content: space-between;
+  padding-right: 0;
 
   &-slogan {
     // position: absolute;
@@ -16,10 +18,11 @@
   }
 
   &-image {
+    flex-grow: 1;
+
     display: flex;
-    width: 55%;
-    justify-items: center;
-    align-items: center;
+    // width: 55%;
+    justify-content: flex-end;
     @include desktop {
     }
 
@@ -30,6 +33,8 @@
 }
 
 .event {
+  width: 100%;
+
   &-wrapper {
     background-color: white;
     padding-top: 13.5px;
@@ -60,13 +65,64 @@
 
     &-container {
       position: absolute;
-      @include paddingX(12px);
-      @include paddingY(20px);
       top: -2px;
       right: 0;
       width: 857px;
-      background-color: khaki;
+      background-color: #fff;
       z-index: 1;
+      border-radius: 14px;
+      box-shadow: 0 0 1px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 4%);
+    }
+
+    &-title {
+      @include paddingX(20px);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include paddingX(12px);
+      @include paddingY(20px);
+    }
+
+    &-item {
+      flex: 0 0 auto;
+      padding: 0 1rem;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #495057;
+      border-radius: 20px;
+      box-shadow: inset 0 0 0 1px #ced4da;
+      background-color: #fff;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    &__header {
+      color: #212529;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    &__close {
+      color: #ced4da;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: underline;
+      background: none;
+      border: 0;
+      cursor: pointer;
     }
   }
 
@@ -79,8 +135,10 @@
     object-fit: fill;
   }
 }
+
+// 모달 창 닫히게 하기
+
 .search {
-  background-color: aqua;
   padding-top: rem(48px);
   padding-bottom: rem(24px);
 
@@ -104,6 +162,7 @@
       border-radius: 28px;
       width: 100%;
       border: 1px solid rgba(29, 192, 120, 0.24);
+      background-color: rgba(29, 192, 120, 0.12);
     }
 
     &-button {
@@ -146,4 +205,9 @@
       line-height: 18px;
     }
   }
+}
+
+.event-list-item:hover,
+.event-all-item:hover {
+  border: 1px solid #00c471;
 }

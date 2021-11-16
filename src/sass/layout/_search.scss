@@ -1,0 +1,208 @@
+@use "../utils" as *;
+
+.commercial {
+  width: 100%;
+  background-color: indigo;
+  display: flex;
+  padding-right: 0;
+
+  &-slogan {
+    &__title {
+      // position: absolute;
+    }
+  }
+
+  &-image {
+    flex-grow: 1;
+
+    display: flex;
+    // width: 55%;
+    justify-content: flex-end;
+    @include desktop {
+    }
+
+    &__slide {
+      width: rem(300px);
+    }
+  }
+}
+
+.event {
+  width: 100%;
+
+  &-wrapper {
+    background-color: white;
+    padding-top: 13.5px;
+  }
+  &-list {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+
+    &-item {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: #ced4da 0px 0px 0px 1px;
+      color: #495057;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 36px;
+      margin: 0px 0px 0px 8px;
+      padding: 0px 16px;
+      text-align: center;
+    }
+  }
+  // event modal
+
+  &-all {
+    position: relative;
+
+    &-container {
+      position: absolute;
+      top: -2px;
+      right: 0;
+      width: 857px;
+      background-color: #fff;
+      z-index: 1;
+      border-radius: 14px;
+      box-shadow: 0 0 1px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 4%);
+    }
+
+    &-title {
+      @include paddingX(20px);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include paddingX(12px);
+      @include paddingY(20px);
+    }
+
+    &-item {
+      flex: 0 0 auto;
+      padding: 0 1rem;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #495057;
+      border-radius: 20px;
+      box-shadow: inset 0 0 0 1px #ced4da;
+      background-color: #fff;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    &__header {
+      color: #212529;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    &__close {
+      color: #ced4da;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: underline;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  &-button {
+    outline: none;
+    border: unset;
+  }
+
+  .commercial-image__slide {
+    object-fit: fill;
+  }
+}
+
+// 모달 창 닫히게 하기
+
+.search {
+  padding-top: rem(48px);
+  padding-bottom: rem(24px);
+
+  &-slogan {
+    font-size: rem(20px);
+    margin-bottom: 20px;
+  }
+
+  &-form {
+    &-wrapper {
+    }
+    &-text {
+      max-width: 580px;
+      width: 100%;
+      position: relative;
+    }
+
+    &-input {
+      @include paddingY(14px);
+      @include paddingX(20px);
+      border-radius: 28px;
+      width: 100%;
+      border: 1px solid rgba(29, 192, 120, 0.24);
+      background-color: rgba(29, 192, 120, 0.12);
+    }
+
+    &-button {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 20px;
+      border: unset;
+      outline: none;
+    }
+  }
+}
+
+.searh-form-wrapper {
+  // background-color: red;
+  @include flexbox($direction: column, $items: center);
+  @include paddingX(10px);
+}
+
+.tag-section {
+  @include flexbox($direction: column, $items: center);
+  padding-bottom: rem(24px);
+  &-list {
+    // @include flexbox($direction: row)
+    max-width: rem(580px);
+
+    &-item {
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include paddingX(10px);
+      border-radius: 20px;
+      background-color: #f1f3f5;
+      letter-spacing: -0.3px;
+      font-size: 12px;
+      margin: 4px;
+      padding: 0 12px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+}
+
+.event-list-item:hover,
+.event-all-item:hover {
+  border: 1px solid #00c471;
+}

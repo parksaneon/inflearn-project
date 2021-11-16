@@ -1,9 +1,9 @@
-@use './unit' as *;
-@use 'sass:math';
+@use "./unit" as *;
+@use "sass:math";
 
 // 고해상도 배경이미지 처리 ---------------------------------------------------- /
 @mixin bgRetina($file, $type, $width: 100%, $height: 100%) {
-  background-image: url('./../assets/images/' + $file + '.' + $type);
+  background-image: url("./../assets/images/" + $file + "." + $type);
   background-repeat: no-repeat;
   background-size: $width $height;
 

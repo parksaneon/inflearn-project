@@ -1,0 +1,109 @@
+@use "../utils" as *;
+
+.login {
+  width: rem(360px);
+  height: rem(432px);
+  margin: auto;
+  @include paddingX(24px);
+  @include paddingY(24px);
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+
+  &-exit {
+    @include buttonReset();
+    margin-left: rem(294px);
+  }
+
+  &-title {
+    margin-top: rem(12px);
+    margin-bottom: rem(24px);
+    display: flex;
+    justify-content: center;
+
+    svg {
+      transform: translateY(3px);
+
+      path {
+        fill: $green;
+      }
+    }
+  }
+
+  &-button {
+    border-color: #00c471;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: rem(14px);
+    @include buttonReset();
+    width: 100%;
+    height: rem(48px);
+    background-color: $green;
+    color: $white;
+    @include marginY(12px);
+    @include paddingX(12px);
+  }
+
+  &-form {
+    width: 100%;
+
+    &-id {
+      margin-bottom: rem(12px);
+    }
+
+    &-pwd {
+      position: relative;
+    }
+
+    &__toggle {
+      @include buttonReset();
+      position: absolute;
+      transform: translateY(60%);
+      right: rem(5px);
+    }
+
+    &-input {
+      width: rem(312px);
+      font-size: rem(15px);
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      @include paddingY(13px);
+      @include paddingX(12px);
+    }
+  }
+
+  &-find {
+    @include flexbox($justify: center, $items: center);
+    margin-bottom: rem(24px);
+    font-size: rem(13px);
+
+    &__register {
+      margin-left: rem(7px);
+    }
+  }
+
+  &-etc {
+    @include flexbox($direction: column, $items: center);
+
+    &-list {
+      display: inline-block;
+    }
+
+    &-item {
+      display: inline-block;
+      width: 30px;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}
+
+.login-find__pwd::after {
+  content: "";
+  width: 1px;
+  height: rem(10px);
+  right: rem(55px);
+  display: inline-block;
+  background-color: #858a8d;
+}

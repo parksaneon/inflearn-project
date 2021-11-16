@@ -1,0 +1,312 @@
+@use '../utils/color' as *;
+@use '../utils/flexbox' as *;
+@use '../utils/sr-only' as *;
+@use '../utils/unit' as *;
+@use '../utils/mixin' as *;
+@use '../utils/media-query' as *;
+
+// 헤더
+.header {
+  box-shadow: 0 2px 4px 0 hsl(0deg 0% 81% / 50%);
+
+  .desktop-only {
+    @include mobile {
+      display: none;
+    }
+  }
+  .mobile-only {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &.open-nav::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+  &.open-nav {
+    .header-container__nav {
+      transform: translateX(0%);
+    }
+  }
+
+  .header-container {
+    @include flexbox;
+    @include autoMargin;
+    max-width: rem(1200px);
+    height: rem(64px);
+
+    @include mobile {
+      @include flexbox($justify: space-between);
+      position: relative;
+      margin: 0 rem(20px);
+    }
+
+    h1 {
+      @include mobile {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      line-height: rem(64px);
+
+      svg {
+        transform: translateY(3px);
+
+        path {
+          fill: $green;
+        }
+      }
+    }
+
+    &__left {
+      @include mobile {
+        order: 0;
+        display: flex;
+      }
+    }
+
+    &__showList {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &__nav {
+      height: 100%;
+      padding-left: rem(16px);
+
+      @include mobile {
+        position: fixed;
+        width: 316px;
+        transform: translateX(-100%);
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding-left: 0;
+        background-color: #fff;
+        z-index: 20;
+        transition: transform 0.5s;
+
+        form {
+          padding: 10px;
+          border-bottom: 1px solid $gray;
+
+          input {
+            width: 100%;
+            height: 40px;
+            padding: 8px;
+            background-color: $inputgray;
+            border: 0;
+            border-radius: 3px;
+            font-size: rem(14px);
+
+            &:active,
+            &:focus {
+              outline: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &__list {
+      height: 100%;
+      @include flexbox($items: center);
+      @include mobile {
+        display: block;
+      }
+
+      ul {
+        right: 0;
+        top: 50px;
+        background-color: #fff;
+        opacity: 0;
+        position: absolute;
+        box-shadow: 8px 5px 8px 1px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%);
+        padding: 8px 0;
+
+        li a {
+          font-size: rem(15px);
+          display: block;
+          padding: 8px 16px;
+        }
+
+        ul {
+          top: 0;
+          transform: translateX(100%);
+          ul {
+            transform: translateX(101%);
+          }
+        }
+      }
+
+      &--lecture {
+        @include mobile {
+          height: 100%;
+        }
+
+        ul {
+          width: 180px;
+          height: 410px;
+
+          ul {
+            transform: translateX(100%);
+          }
+
+          li:hover {
+            > ul {
+              opacity: 1;
+            }
+          }
+
+          @include mobile {
+            padding: 0;
+            opacity: 1;
+            position: static;
+            height: 100%;
+            box-shadow: none;
+            border-right: 1px solid $gray;
+
+            li:not(:first-child) {
+              border-top: 1px solid $gray;
+            }
+
+            li a {
+              padding: rem(16px);
+            }
+          }
+        }
+      }
+
+      &--other ul {
+        width: 130px;
+      }
+
+      > li {
+        position: relative;
+        padding: rem(10px) rem(16px);
+
+        @include mobile {
+          padding: 0;
+        }
+
+        &[class^='header-container__list']:hover::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          margin-left: -0.5em;
+          bottom: -27px;
+          left: 50%;
+          box-sizing: border-box;
+          border: 10px solid black;
+          border-color: transparent transparent #fff #fff;
+          transform: rotate(135deg);
+          box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        > a:hover {
+          font-weight: 700;
+          color: $green;
+        }
+
+        &:hover {
+          > ul {
+            opacity: 1;
+          }
+        }
+
+        &:first-child ul {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+
+    &__right {
+      @include mobile {
+        order: 2;
+        margin-left: 0;
+      }
+      margin-left: auto;
+      @include flexbox($items: center);
+
+      input {
+        width: 170px;
+        border-radius: 3px;
+        box-shadow: none;
+        border: 1px solid transparent;
+        height: 36px;
+        background-color: $silver;
+        padding: rem(5px) rem(9px);
+        margin-right: 15px;
+
+        &:active,
+        &:focus {
+          outline: $green;
+          border-color: $green;
+        }
+
+        &:hover {
+          border-color: $gray;
+        }
+      }
+
+      .link-container {
+        :first-child {
+          border: none;
+        }
+        a {
+          border-radius: 4px;
+          padding: 8px;
+          border: 1px solid $gray;
+
+          &.signup {
+            font-weight: 700;
+            color: $white;
+            background-color: $orange;
+          }
+
+          @include mobile {
+            font-size: rem(10px);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-nav ul {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px 0 rgb(33 37 41 / 8%);
+    @include flexbox($justify: space-evenly);
+
+    li {
+      width: 20%;
+      padding-top: 5px;
+
+      a {
+        display: block;
+        text-align: center;
+        line-height: 60px;
+        font-size: rem(12px);
+
+        i {
+          display: block;
+          transform: translateY(10px);
+          font-size: 24px;
+          width: 22px;
+          height: 20px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

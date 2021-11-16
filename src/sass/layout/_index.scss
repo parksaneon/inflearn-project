@@ -1,5 +1,8 @@
+@forward './footer';
 @forward './header';
+@forward './search';
 @forward './entry_lecture';
+@forward './visual';
 @use '../utils/' as *;
 
 main {

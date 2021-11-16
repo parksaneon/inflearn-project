@@ -1,0 +1,29 @@
+@use '../utils/mixin' as *;
+@use '../utils/' as *;
+@use '../utils/color' as *;
+
+.main-visual {
+  background-color: $green;
+}
+.commercial__container {
+  @include autoMargin;
+  max-width: rem(1200px);
+
+  a {
+    @include flexbox($justify: space-between, $items: stretch);
+    height: 320px;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  .commercial-slogan {
+    &__title {
+      font-weight: 700;
+      font-size: rem(32px);
+      color: $white;
+      line-height: 1.5;
+    }
+  }
+}

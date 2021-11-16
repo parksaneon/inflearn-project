@@ -1,8 +1,83 @@
 @use "../utils" as *;
 
 .commercial {
-  @include marginX(120px);
-  background-image: url("./../images/인프런/슬라이드/슬라이드1-2.png");
+  width: 100%;
+  background-color: indigo;
+  display: flex;
+
+  &-slogan {
+    // position: absolute;
+    // top: 10%;
+    // left: 10%;
+
+    &__title {
+      // position: absolute;
+    }
+  }
+
+  &-image {
+    display: flex;
+    width: 55%;
+    justify-items: center;
+    align-items: center;
+    @include desktop {
+    }
+
+    &__slide {
+      width: rem(300px);
+    }
+  }
+}
+
+.event {
+  &-wrapper {
+    background-color: white;
+    padding-top: 13.5px;
+  }
+  &-list {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+
+    &-item {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: #ced4da 0px 0px 0px 1px;
+      color: #495057;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 36px;
+      margin: 0px 0px 0px 8px;
+      padding: 0px 16px;
+      text-align: center;
+    }
+  }
+  // event modal
+
+  &-all {
+    position: relative;
+
+    &-container {
+      position: absolute;
+      @include paddingX(12px);
+      @include paddingY(20px);
+      top: -2px;
+      right: 0;
+      width: 857px;
+      background-color: khaki;
+      z-index: 1;
+    }
+  }
+
+  &-button {
+    outline: none;
+    border: unset;
+  }
+
+  .commercial-image__slide {
+    object-fit: fill;
+  }
 }
 .search {
   background-color: aqua;

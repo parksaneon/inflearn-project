@@ -539,36 +539,44 @@
     </div>
   </header>
   <main>
+    <div class="main-container">
     <section class="commercial">
       <div class="commercial-slogan">
         <h3 class="commercial-slogan__title">독서의 계절, 가을엔 강의 한편</h3>
         <p class="commercial-slogan__under">붙잡고 싶은 가을,인프런과 함께해요.</p>
       </div>
       <div class="commercial-image">
-        <img src="images/인프런/슬라이드/슬라이드1-2.png" alt="진로탐색">
+        <img class="commercial-image__slide" src="images/인프런/슬라이드/슬라이드2.png" alt="진로탐색">
       </div>
     </section>
     <section class="event">
       <h3 class="sr-only">진행 이벤트</h3>
-      <ul class="event-list">
-        <li><a href="#">독서의 계절</a></li>
-        <li><a href="#">신규 강의</a></li>
-        <li><a href="#">나에게 맞는 강의</a></li>
-        <li><a href="#">인프런은</a></li>
-        <li><a href="#">인프런 동료 찾기</a></li>
-      </ul>
-      <button class="event-button"> 이벤트 더 보기 </button>
+      <div class="event-wrapper">
+        <ul class="event-list">
+          <li class="event-list-item"><a href="#">독서의 계절</a></li>
+          <li class="event-list-item"><a href="#">신규 강의</a></li>
+          <li class="event-list-item"><a href="#">나에게 맞는 강의</a></li>
+          <li class="event-list-item"><a href="#">인프런은</a></li>
+          <li class="event-list-item"><a href="#">인프런 동료 찾기</a></li>
+          <li class="event-list-item"><button class="event-button"><i class="fas fa-chevron-down"></i></button></li>
+        </ul>
+      </div>
       <!--  더보기 진행 중인 이벤트 -->
       <div class="event-all">
-        <h3 class="sr-only event-all__header">진행중인 모든 이벤트</h3>
-        <a href="#" class="event-all__close">닫기</a>
-        <ul class="envet-all__list">
-          <li><a href="#">독서의 계절</a></li>
-          <li><a href="#">신규 강의</a></li>
-          <li><a href="#">나에게 맞는 강의</a></li>
-          <li><a href="#">인프런은</a></li>
-          <li><a href="#">인프런 동료 찾기</a></li>
-        </ul>
+        <div class="event-all-container">
+          <h3 class="event-all__header">진행중인 모든 이벤트</h3>
+          <button class="event-all__close">닫기</button>
+          <ul class="envet-all__list">
+            <li class="event-list-item"><a href="#">독서의 계절</a></li>
+            <li class="event-list-item"><a href="#">주간 인프런 #36</a></li>
+            <li class="event-list-item"><a href="#">지금 할인중 💸</a></li>
+            <li class="event-list-item"><a href="#">나에게 맞는 강의</a></li>
+            <li class="event-list-item"><a href="#">지식공유신청</a></li>
+            <li class="event-list-item"><a href="#">신규 강의 🎁</a></li>
+            <li class="event-list-item"><a href="#">인프런 동료찾기</a></li>
+            <li class="event-list-item"><a href="#">인프런은🌱</a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="search">
@@ -1028,6 +1036,7 @@
       </div>
     </div>
   </footer>
+</div>
   </main>
   <script src="./index.js"></script>
 </body>

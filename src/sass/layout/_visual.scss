@@ -19,11 +19,56 @@
   }
 
   .commercial-slogan {
+    position: relative;
+    @include flexbox($direction: column, $justify: center);
+    
+    &__tag{
+      left: 0px;
+      top: 50px;
+      position: absolute;
+      background-color: #00dfff;
+      border-radius: 4px;
+      font-weight: 700;
+      padding: 5px 10px;
+      color: $white;
+    }
     &__title {
       font-weight: 700;
       font-size: rem(32px);
       color: $white;
       line-height: 1.5;
+      margin-bottom: 8px;
     }
+
+    &__under{
+      color: $white;
+      line-height: 1.6;
+    }
+  }
+}
+
+.swiper-pagination-controller{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  width: 135px;
+  height: 36px;
+  font-size: .875rem;
+  color: #fff;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,.5);
+  
+  .control-wrapper{
+    display: flex;
+    align-items: center;
+  }
+  button{
+    padding: 0;
+    background: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
   }
 }

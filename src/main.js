@@ -1,4 +1,5 @@
 import './sass/index.scss';
+import './header.js';
 
 const leftButton = document.querySelector('.swipe-button-left');
 const rightButton = document.querySelector('.swipe-button-right');

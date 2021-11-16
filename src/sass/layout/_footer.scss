@@ -2,8 +2,8 @@
 
 main {
   @include mobile {
-    @include paddingX(16px);
-    @include paddingY(16px);
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .main-container {
     max-width: rem(1171px);
@@ -49,7 +49,7 @@ main {
     line-height: 1.33;
 
     strong{
-      color:$green;
+      color:$inflearn-green;
     }
   }
 
@@ -69,10 +69,13 @@ main {
     color:$gray;
     margin-top: 35px;
 
+    @include mobile{
+      flex-direction: row;
+    }
   }
 
   &__link{
-    border: 1px solid $green;
+    border: 1px solid $inflearn-green;
     color: $black;
     border-radius: 3px;
     font-size: rem(16px);
@@ -80,7 +83,18 @@ main {
     line-height: 1;
     padding:10px 16px;
     @include flexbox($items:center);
-    
+
+    @include mobile{
+      font-size: rem(12px);
+      flex-grow:1;
+      display: block;
+      padding: 0;
+      text-align: center;
+      line-height: 3.5;
+    }
+  }
+  &__link:hover{
+    background-color: rgba($inflearn-green,0.2);
   }
 
   &__link:nth-child(1){
@@ -100,6 +114,11 @@ main {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    @include mobile{
+      padding: 0;
+      margin-bottom: rem(36px);
+    }
   }
 
   &__right::-webkit-scrollbar{
@@ -138,6 +157,13 @@ main {
   &__course{
     font-size: rem(17px);
     font-weight: 600;
+
+    @include mobile{
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
   &__content{
     margin-top: 8px;

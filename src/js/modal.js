@@ -6,9 +6,8 @@ function modalControll(opens, closes, modals) {
   open.addEventListener('click', function () {
     modal.classList.remove('hidden');
   });
-  console.log(close);
-  close.addEventListener('click', function (e) {
-    console.log(e);
+
+  close.addEventListener('click', function () {
     modal.classList.add('hidden');
   });
 }

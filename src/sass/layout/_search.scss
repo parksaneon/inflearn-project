@@ -1,33 +1,5 @@
 @use '../utils' as *;
 
-.commercial {
-  width: 100%;
-  background-color: indigo;
-  display: flex;
-  padding-right: 0;
-
-  &-slogan {
-    &__title {
-      // position: absolute;
-    }
-  }
-
-  &-image {
-    flex-grow: 1;
-
-    display: flex;
-    // width: 55%;
-    justify-content: flex-end;
-    // align-items: stretch;
-    @include desktop {
-    }
-
-    &__slide {
-      // width: rem(300px);
-    }
-  }
-}
-
 .event {
   width: 100%;
 

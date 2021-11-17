@@ -1,0 +1,170 @@
+@use "../utils" as *;
+
+.modal {
+  position: fixed;
+  background-color: rgba(11, 19, 30, 0.37);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.hidden {
+  display: none;
+}
+
+.login {
+  width: rem(360px);
+  height: rem(432px);
+  margin: auto;
+  @include paddingX(24px);
+  @include paddingY(24px);
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+
+  &-exit {
+    @include buttonReset();
+    margin-left: rem(294px);
+  }
+
+  &-title {
+    margin-top: rem(12px);
+    margin-bottom: rem(24px);
+    display: flex;
+    justify-content: center;
+
+    svg {
+      transform: translateY(3px);
+
+      path {
+        fill: $green;
+      }
+    }
+  }
+
+  &-button {
+    border-color: #00c471;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: rem(14px);
+    @include buttonReset();
+    width: 100%;
+    height: rem(48px);
+    background-color: $green;
+    color: $white;
+    @include marginY(12px);
+    @include paddingX(12px);
+  }
+
+  &-form {
+    width: 100%;
+
+    &-id {
+      margin-bottom: rem(12px);
+    }
+
+    &-pwd {
+      position: relative;
+    }
+
+    &__toggle {
+      @include buttonReset();
+      position: absolute;
+      transform: translateY(60%);
+      right: rem(5px);
+    }
+
+    &-input {
+      width: rem(312px);
+      font-size: rem(15px);
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      @include paddingY(13px);
+      @include paddingX(12px);
+    }
+  }
+
+  &-find {
+    @include flexbox($justify: center, $items: center);
+    margin-bottom: rem(24px);
+    font-size: rem(13px);
+
+    &__register {
+      margin-left: rem(7px);
+    }
+  }
+
+  &-etc {
+    @include flexbox($direction: column, $items: center);
+
+    &-list {
+      display: inline-block;
+    }
+
+    &__title {
+      margin-bottom: rem(14px);
+      background-color: $white;
+      @include paddingX(8px);
+      font-size: rem(11px);
+      z-index: 1;
+      color: #abb0b5;
+    }
+
+    &-bar {
+      position: relative;
+      bottom: -8px;
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #f1f3f5;
+      border: none;
+      // z-index: -1;
+    }
+
+    &-item {
+      display: inline-block;
+      background-color: atrr(data-color);
+      width: rem(45px);
+      height: rem(45px);
+      padding: rem(10px);
+      line-height: rem(25px);
+      text-align: center;
+      border: 0;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    }
+  }
+}
+
+.login-find__pwd::after {
+  content: "";
+  width: 1px;
+  height: rem(10px);
+  right: rem(55px);
+  display: inline-block;
+  background-color: #858a8d;
+}
+
+$colors: (
+  "kakao": #fae500,
+  "google": #f8f8f8,
+  "github": #3c4043,
+  "facebook": #325ca6,
+  "apple": #fff,
+);
+
+//colors 변수를 순환하면서 값을 뽑아낸다
+@each $color, $color-value in $colors {
+  .item-#{$color} {
+    background-color: $color-value;
+  }
+}

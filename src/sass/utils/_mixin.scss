@@ -126,3 +126,11 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+// 버튼 태그 아이콘들만 보이도록
+
+@mixin buttonReset() {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}

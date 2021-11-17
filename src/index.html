@@ -953,40 +953,6 @@
         <section class="event">
           <h3 class="sr-only">진행 이벤트</h3>
           <div class="event-wrapper desktop-only">
-            <div class="contollers">
-              <div class="swiper-pagination-controller">
-                <div class="index-wrapper">
-                  <span class="current-index">1</span>/<span class="total-count">8</span>
-                </div>
-                <div class="control-wrapper">
-                  <button type="button" class="control-previous-button e-previous-banner">
-                    <i class="far fa-chevron-left"></i>
-                  </button>
-                  <button type="button" class="control-play-pause-button e-play-pause-swiper play">
-                    <svg
-                      width="14px"
-                      height="14px"
-                      enable-background="new 0 0 155.3 159.3"
-                      viewBox="0 0 155.3 159.3"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill="#ffffff"
-                        d="m62 135.3h-13.3c-1.9 0-3.4-1.5-3.4-3.4v-104.6c0-1.9 1.5-3.4 3.4-3.4h13.3c1.9 0 3.4 1.5 3.4 3.4v104.7c-.1 1.8-1.6 3.3-3.4 3.3z"
-                      ></path>
-                      <path
-                        fill="#ffffff"
-                        d="m106.6 135.3h-13.3c-1.9 0-3.4-1.5-3.4-3.4v-104.6c0-1.9 1.5-3.4 3.4-3.4h13.3c1.9 0 3.4 1.5 3.4 3.4v104.7c0 1.8-1.5 3.3-3.4 3.3z"
-                      ></path>
-                    </svg>
-                    <i class="fas fa-play"></i>
-                  </button>
-                  <button type="button" class="control-next-button e-next-banner">
-                    <i class="far fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
             <ul class="event-list">
               <li class="event-list-item"><a href="#">독서의 계절</a></li>
               <li class="event-list-item"><a href="#">주간 인프런 #36</a></li>
@@ -1001,49 +967,53 @@
               </li>
             </ul>
           </div>
-          <div class="event-all desktop-only">
-            <div class="event-all-container">
+          <div
+            class="event-all desktop-only hidden"
+            role="dialog"
+            aria-labelledby="event"
+            aria-modal="true"
+          >
+            <div class="event-all-container" id="event">
               <div class="event-all-title">
                 <h3 class="event-all__header">진행중인 모든 이벤트</h3>
                 <button class="event-all__close">닫기</button>
               </div>
-              <ul class="event-all-list">
-                <li class="event-all-item"><a href="#">독서의 계절</a></li>
-                <li class="event-all-item"><a href="#">주간 인프런 #36</a></li>
-                <li class="event-all-item"><a href="#">지금 할인중 💸</a></li>
-                <li class="event-all-item"><a href="#">나에게 맞는 강의</a></li>
-                <li class="event-all-item"><a href="#">지식공유신청</a></li>
-                <li class="event-all-item"><a href="#">신규 강의 🎁</a></li>
-                <li class="event-all-item"><a href="#">인프런 동료찾기</a></li>
-                <li class="event-all-item"><a href="#">인프런은🌱</a></li>
+              <ul class="event-list">
+                <li class="event-list-item"><a href="#">독서의 계절</a></li>
+                <li class="event-list-item"><a href="#">주간 인프런 #36</a></li>
+                <li class="event-list-item"><a href="#">지금 할인중 💸</a></li>
+                <li class="event-list-item"><a href="#">나에게 맞는 강의</a></li>
+                <li class="event-list-item"><a href="#">지식공유신청</a></li>
+                <li class="event-list-item"><a href="#">신규 강의 🎁</a></li>
+                <li class="event-list-item"><a href="#">인프런 동료찾기</a></li>
+                <li class="event-list-item"><a href="#">인프런은🌱</a></li>
+                <li class="event-list-item">
+                  <button class="event-button"><i class="fas fa-chevron-down"></i></button>
+                </li>
               </ul>
+            </div>
+            <div class="event-all desktop-only">
+              <div class="event-all-container">
+                <div class="event-all-title">
+                  <h3 class="event-all__header">진행중인 모든 이벤트</h3>
+                  <button class="event-all__close">닫기</button>
+                </div>
+                <ul class="event-all-list">
+                  <li class="event-all-item"><a href="#">독서의 계절</a></li>
+                  <li class="event-all-item"><a href="#">주간 인프런 #36</a></li>
+                  <li class="event-all-item"><a href="#">지금 할인중 💸</a></li>
+                  <li class="event-all-item"><a href="#">나에게 맞는 강의</a></li>
+                  <li class="event-all-item"><a href="#">지식공유신청</a></li>
+                  <li class="event-all-item"><a href="#">신규 강의 🎁</a></li>
+                  <li class="event-all-item"><a href="#">인프런 동료찾기</a></li>
+                  <li class="event-all-item"><a href="#">인프런은🌱</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-        <section class="search">
-          <h3 class="sr-only">강의명,강사명 검색</h3>
-          <form method="POST" class="search-form">
-            <fieldset>
-              <legend class="sr-only">검색</legend>
-              <div class="searh-form-wrapper">
-                <p class="search-slogan">인프런에서 연봉을 올리세요.</p>
-                <div class="search-form-text">
-                  <input
-                    type="search"
-                    class="search-form-input"
-                    id="search"
-                    name="search"
-                    placeholder="배우고싶은 지식을 입력해보세요"
-                  />
-                  <button type="submit" class="search-form-button">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </section>
         <section class="tag-section">
+          <h3 class="sr-only">검색어 태그 출력 부분</h3>
           <ul class="tag-section-list desktop-only">
             <li class="tag-section-list-item"><a href="#">#MVC</a></li>
             <li class="tag-section-list-item"><a href="#">#Spring Boot</a></li>
@@ -1058,14 +1028,14 @@
           </ul>
         </section>
 
-        <div class="modal">
-          <article class="login">
+        <div class="modal hidden" role="dialog" aria-labelledby="login" aria-modal="true">
+          <article class="login" id="login">
+            <button class="login-exit"><i class="fas fa-times"></i></button>
             <h1 class="login-title">
               <span class="sr-only">인프런</span>
               <a href="#" title="인프런 메인 화면 이동하기">
                 <svg
                   width="110"
-                  id="icon_brand_logo"
                   class="brand_logo"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 433 90"
@@ -1088,34 +1058,31 @@
             <form action="#" method="get" class="login-form">
               <fieldset>
                 <legend class="sr-only">로그인</legend>
-                <div class="login-form__id">
-                  <input type="email" name="id" required />
-                  <label>이메일 또는 아이디 입력</label>
+                <div class="login-form-id">
+                  <label class="sr-only" for="id">이메일 또는 아이디 입력</label>
+                  <input
+                    class="login-form-input"
+                    type="email"
+                    name="id"
+                    id="id"
+                    required
+                    placeholder="이메일 또는 아이디 입력"
+                  />
                 </div>
-                <div class="login-form__pwd">
-                  <input type="password" name="password" required />
-                  <label>비밀번호</label>
+                <div class="login-form-pwd">
+                  <label class="sr-only" for="password">비밀번호</label>
+                  <input
+                    class="login-form-input"
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                    placeholder="비밀번호"
+                  />
                   <button type="button" class="login-form__toggle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill="#212529"
-                        d="M10.333 8c0 1.289-1.044 2.333-2.333 2.333C6.71 10.333 5.667 9.29 5.667 8 5.667 6.711 6.71 5.667 8 5.667c1.289 0 2.333 1.044 2.333 2.333z"
-                      ></path>
-                      <path
-                        fill="#212529"
-                        fill-rule="evenodd"
-                        d="M8 2.333c-2.288 0-4.083 1.023-5.37 2.16C1.348 5.63.544 6.902.22 7.469.03 7.8.03 8.2.22 8.533c.323.566 1.127 1.838 2.41 2.973 1.287 1.138 3.082 2.16 5.37 2.16 2.288 0 4.083-1.022 5.37-2.16 1.283-1.135 2.087-2.407 2.41-2.973.19-.333.19-.733 0-1.065-.323-.567-1.127-1.839-2.41-2.974-1.287-1.138-3.082-2.16-5.37-2.16zm-6.912 5.63c.295-.516 1.035-1.685 2.205-2.72C4.461 4.21 6.03 3.333 8 3.333c1.97 0 3.54.877 4.707 1.91 1.17 1.035 1.91 2.204 2.205 2.72.008.015.01.028.01.037 0 .01-.002.022-.01.037-.295.516-1.035 1.685-2.205 2.72-1.168 1.033-2.737 1.91-4.707 1.91-1.97 0-3.54-.877-4.707-1.91-1.17-1.035-1.91-2.204-2.205-2.72-.008-.015-.01-.028-.01-.037 0-.01.002-.022.01-.037z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <i class="far fa-eye toggle-icon"></i>
                   </button>
                 </div>
-                <button type="submit" class="login-button">로그인</button>
               </fieldset>
             </form>
             <div class="login-find">
@@ -1123,12 +1090,25 @@
               <a href="#" class="login-find__register">회원가입</a>
             </div>
             <div class="login-etc">
+              <hr class="login-etc-bar" />
               <p class="login-etc__title">간편로그인</p>
-              <a href="#">카카오톡</a>
-              <a href="#">구글</a>
-              <a href="#">깃허브</a>
-              <a href="#">페이스북</a>
-              <a href="#">애플</a>
+              <div class="login-etc-list">
+                <a class="login-etc-item item-kakao" href="#" aria-label="카카오톡 로그인"
+                  ><i class="fas fa-comments"></i
+                ></a>
+                <a class="login-etc-item item-google" href="#" aria-label="구글 로그인"
+                  ><i class="fab fa-google"></i
+                ></a>
+                <a class="login-etc-item item-github" href="#" aria-label="깃허브 로그인"
+                  ><i class="fab fa-github-square"></i
+                ></a>
+                <a class="login-etc-item item-facebook" href="#" aria-label="페이스북 로그인"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+                <a class="login-etc-item item-apple" href="#" aria-label="애플 로그인"
+                  ><i class="fab fa-apple"></i
+                ></a>
+              </div>
             </div>
           </article>
         </div>
@@ -1141,598 +1121,13 @@
           <small class="description">이미 검증된 쉽고 친절한 입문 강의!!</small>
           <div class="swipe-container">
             <ul class="card-container">
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="card">
-                <a class="card-link" href="#">
-                  <figure class="card-image-container">
-                    <img
-                      class="card-image"
-                      alt="비전공자를 위한 진짜 입문 올인원 개발 클래스"
-                      src="images/인프런/강의/비전공자를위한개발자취업올인원가이드.jpg"
-                    />
-                    <figcaption>비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</figcaption>
-                  </figure>
-                  <dl>
-                    <dt class="sr-only">강사</dt>
-                    <dd>그랩</dd>
-                    <dt class="sr-only">평점</dt>
-                    <dd class="stars">
-                      <div class="stars-outer">
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <i aria-hidden="true" class="far fa-star"></i>
-                        <div class="stars-inner">
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                          <i aria-hidden="true" class="fas fa-star"></i>
-                        </div>
-                      </div>
-                      <span>(72)</span>
-                    </dd>
-                    <dt class="sr-only">가격</dt>
-                    <dd class="lecture-price"><del class="sale">₩44,000</del>₩143,000</dd>
-                    <dt class="sr-only">태그</dt>
-                    <dd>
-                      <ul class="tag-container">
-                        <li class="tag">
-                          <span>+1300명</span>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
-                  <span class="on-sale">30% 할인</span>
-                  <div class="card-dark desktop-only">
-                    <p class="card-dark__title">비전공자를 위한 진짜 입문 올인원 개발 클래스</p>
-                    <p class="card-dark__description">
-                      왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택
-                      강의입니다. 개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요.
-                      Javascript 하나로 진행합니다!
-                    </p>
-                    <dl>
-                      <dt class="sr-only">강의 난이도</dt>
-                      <dd><i class="fas fa-chart-line"></i>입문</dd>
-                      <dt class="sr-only">관련 분야</dt>
-                      <dd><i class="fas fa-code-branch"></i>풀스택, 웹 개발, 취업 이직</dd>
-                      <dt class="sr-only">사용 기술</dt>
-                      <dd><i class="fas fa-cubes"></i>JavaScript, React, Node.js</dd>
-                    </dl>
-                    <div>
-                      <ul class="card-icons">
-                        <li>
-                          <span><i class="fas fa-cart-plus"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="far fa-heart"></i></span>
-                        </li>
-                        <li>
-                          <span><i class="fas fa-plus"></i></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </li>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
+              <lecture-card></lecture-card>
             </ul>
             <div class="swipe-button">
               <button class="swipe-button-left">&lt;</button>

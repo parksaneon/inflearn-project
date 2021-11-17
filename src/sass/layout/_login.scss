@@ -1,5 +1,20 @@
 @use "../utils" as *;
 
+.modal {
+  position: fixed;
+  background-color: rgba(11, 19, 30, 0.37);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.hidden {
+  display: none;
+}
+
 .login {
   width: rem(360px);
   height: rem(432px);
@@ -9,6 +24,11 @@
   background-color: $white;
   border-radius: 6px;
   border: 1px solid #dee2e6;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
 
   &-exit {
     @include buttonReset();
@@ -89,12 +109,38 @@
       display: inline-block;
     }
 
+    &__title {
+      margin-bottom: rem(14px);
+      background-color: $white;
+      @include paddingX(8px);
+      font-size: rem(11px);
+      z-index: 1;
+      color: #abb0b5;
+    }
+
+    &-bar {
+      position: relative;
+      bottom: -8px;
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #f1f3f5;
+      border: none;
+      // z-index: -1;
+    }
+
     &-item {
       display: inline-block;
-      width: 30px;
-      padding: 20px;
-      line-height: 30px;
+      background-color: atrr(data-color);
+      width: rem(45px);
+      height: rem(45px);
+      padding: rem(10px);
+      line-height: rem(25px);
       text-align: center;
+      border: 0;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
     }
   }
 }
@@ -106,4 +152,19 @@
   right: rem(55px);
   display: inline-block;
   background-color: #858a8d;
+}
+
+$colors: (
+  "kakao": #fae500,
+  "google": #f8f8f8,
+  "github": #3c4043,
+  "facebook": #325ca6,
+  "apple": #fff,
+);
+
+//colors 변수를 순환하면서 값을 뽑아낸다
+@each $color, $color-value in $colors {
+  .item-#{$color} {
+    background-color: $color-value;
+  }
 }

@@ -1,5 +1,6 @@
 import './sass/index.scss';
-import './header.js';
+import './js/header.js';
+import './js/modal.js';
 
 const leftButton = document.querySelector('.swipe-button-left');
 const rightButton = document.querySelector('.swipe-button-right');
@@ -23,3 +24,4 @@ rightButton.onclick = function () {
     behavior: 'smooth',
   });
 };
+

@@ -280,6 +280,7 @@
   }
 
   img {
+    max-width: 100%;
     height: rem(40px);
     padding-bottom: rem(15px);
     filter: grayscale(1);
@@ -352,6 +353,7 @@
       max-width: 100%;
     }
     @include pad {
+      width: 100%;
       flex-grow: 1;
       height: rem(290px);
       max-width: 100%;
@@ -367,7 +369,7 @@
 
   &__brief {
     @include mobile {
-      font-size: rem(13px) !important;
+      font-size: rem(15px) !important;
     }
   }
 

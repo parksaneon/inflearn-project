@@ -1,5 +1,6 @@
 // 미디어 쿼리 중단점 (Breakpoints) --------------------------------------------------------------- /
 $break: 1000px;
+$min:1200px;
 
 @mixin mobile {
   @media (max-width: #{$break - 1}) {
@@ -13,7 +14,7 @@ $break: 1000px;
 }
 
 @mixin pad{
-  @media(max-width: #{$break - 1}){
+  @media (max-width: #{$min - 1}){
     @content;
   }
 }

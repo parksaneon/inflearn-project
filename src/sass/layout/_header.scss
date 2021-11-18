@@ -9,6 +9,16 @@
 .header {
   box-shadow: 0 2px 4px 0 hsl(0deg 0% 81% / 50%);
 
+  @include mobile {
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    padding: 0 rem(20px);
+    z-index: 20;
+  }
+
   .desktop-only {
     @include mobile {
       display: none;
@@ -43,8 +53,12 @@
 
     @include mobile {
       @include flexbox($justify: space-between);
-      position: relative;
-      margin: 0 rem(20px);
+      // position: fixed;
+      // width: calc(100% - 32px);
+      // background-color: $white;
+      // top: 0;
+      // margin: 0 rem(20px);
+      // z-index: 20;
     }
 
     h1 {
@@ -94,13 +108,13 @@
 
         form {
           padding: 10px;
-          border-bottom: 1px solid $gray100;
+          border-bottom: 1px solid $gray500;
 
           input {
             width: 100%;
             height: 40px;
             padding: 8px;
-            background-color: $gray100;
+            background-color: $gray500;
             border: 0;
             border-radius: 3px;
             font-size: rem(14px);
@@ -125,10 +139,15 @@
         right: 0;
         top: 50px;
         background-color: #fff;
-        opacity: 0;
+        display: none;
         position: absolute;
         box-shadow: 8px 5px 8px 1px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%);
         padding: 8px 0;
+        z-index: 10;
+
+        &.open {
+          display: block;
+        }
 
         li a {
           font-size: rem(15px);
@@ -150,6 +169,12 @@
           height: 100%;
         }
 
+        &--one {
+          @include mobile {
+            display: block !important;
+          }
+        }
+
         ul {
           width: 180px;
           height: 410px;
@@ -159,21 +184,20 @@
           }
 
           li:hover {
-            > ul {
+            ul {
               opacity: 1;
             }
           }
 
           @include mobile {
             padding: 0;
-            opacity: 1;
             position: static;
             height: 100%;
             box-shadow: none;
-            border-right: 1px solid $gray100;
+            border-right: 1px solid $gray500;
 
             li:not(:first-child) {
-              border-top: 1px solid $gray100;
+              border-top: 1px solid $gray500;
             }
 
             li a {
@@ -217,7 +241,7 @@
 
         &:hover {
           > ul {
-            opacity: 1;
+            display: block;
           }
         }
 
@@ -236,13 +260,25 @@
       margin-left: auto;
       @include flexbox($items: center);
 
+      .search-lecture {
+        position: relative;
+
+        button {
+          position: absolute;
+          right: 15px;
+          height: 100%;
+          border: 0;
+          background-color: transparent;
+        }
+      }
+
       input {
         width: 170px;
         border-radius: 3px;
         box-shadow: none;
         border: 1px solid transparent;
         height: 36px;
-        background-color: $silver;
+        background-color: $gray600;
         padding: rem(5px) rem(9px);
         margin-right: 15px;
 

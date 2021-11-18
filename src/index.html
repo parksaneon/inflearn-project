@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    
     <header class="header">
       <div class="header-container">
         <h1 class="header-container__logo">
@@ -61,363 +62,557 @@
             <form action="#" method="get" class="mobile-only">
               <input type="text" placeholder="강의/강사명을 입력해주세요" />
             </form>
-            <ul class="header-container__list">
-              <li class="header-container__list--lecture">
-                <a href="#" id="lecture" class="desktop-only">강의</a>
-                <ul aria-labelledby="lecture" class="header-container__list--lecture--one">
-                  <li class="mobile-only">
-                    <a href="#">전체</a>
+            <ul class="header-container__list" aria-label="inflearn Lecture List" role="menubar">
+              <li role="none" class="header-container__list--lecture">
+                <a href="#" role="menuitem" id="lecture" class="desktop-only" tabindex="0">강의</a>
+                <ul
+                  aria-labelledby="lecture"
+                  role="menu"
+                  class="header-container__list--lecture--one"
+                >
+                  <li role="none" class="mobile-only">
+                    <a href="#" role="menuitem">전체</a>
                   </li>
-                  <li>
-                    <a href="#" id="programing">개발 &#183; 프로그래밍</a>
+                  <li role="none">
+                    <a href="#" role="menuitem" id="programing" tabindex="0"
+                      >개발 &#183; 프로그래밍</a
+                    >
                     <ul
                       aria-labelledby="programing"
                       class="desktop-only header-container__list--lecture--two"
+                      ole="menu"
                     >
-                      <li>
-                        <a href="#" id="development">웹 개발</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="development" tabindex="-1">웹 개발</a>
                         <ul
                           aria-labelledby="development"
                           class="desktop-only header-container__list--lecture--three"
+                          role="menu"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="frontend">프론트엔드</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="frontend" tabindex="-1">프론트엔드</a>
                         <ul
                           aria-labelledby="frontend"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">jQuery</a></li>
-                          <li><a href="#">인터랙티브 웹</a></li>
-                          <li><a href="#">웹앱</a></li>
-                          <li><a href="#">ES6</a></li>
-                          <li><a href="#">TypeScript</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">jQuery</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">인터랙티브 웹</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">ES6</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">TypeScript</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="backend">백엔드</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="backend" tabindex="-1">백엔드</a>
                         <ul
                           aria-labelledby="backend"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">Spring Boot</a></li>
-                          <li><a href="#">MVC</a></li>
-                          <li><a href="#">JPA</a></li>
-                          <li><a href="#">Docker</a></li>
-                          <li><a href="#">AWS</a></li>
-                          <li><a href="#">REST API</a></li>
-                          <li><a href="#">DevOps</a></li>
-                          <li><a href="#">웹 개발</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Django</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Full-Stack</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Express</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">MongoDB</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Firebase</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="fullstack">풀스택</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="fullstack" tabindex="-1">풀스택</a>
                         <ul
                           aria-labelledby="fullstack"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Django</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Full-Stack</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Python</a></li>
-                          <li><a href="#">Express</a></li>
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">MongoDB</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">Firebase</a></li>
-                          <li><a href="#">Back-End</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Django</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Full-Stack</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Express</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">MongoDB</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Firebase</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="mobile">모바일 앱 개발</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="mobile" tabindex="-1">모바일 앱 개발</a>
                         <ul
                           aria-labelledby="mobile"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">모바일 앱 개발</a></li>
-                          <li><a href="#">Android</a></li>
-                          <li><a href="#">iOS</a></li>
-                          <li><a href="#">Swift</a></li>
-                          <li><a href="#">Kotlin</a></li>
-                          <li><a href="#">Firebase</a></li>
-                          <li><a href="#">Flutter</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">IONIC</a></li>
-                          <li><a href="#">React Native</a></li>
-                          <li><a href="#">게임개발</a></li>
-                          <li><a href="#">SwiftUI</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">모바일 앱 개발</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Android</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">iOS</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Swift</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Kotlin</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Firebase</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Flutter</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">IONIC</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">React Native</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">게임개발</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">SwiftUI</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="language">프로그래밍 언어</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="language" tabindex="-1">프로그래밍 언어</a>
                         <ul
                           aria-labelledby="language"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Python</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">알고리즘</a></li>
-                          <li><a href="#">데이터 분석</a></li>
-                          <li><a href="#">Swift</a></li>
-                          <li><a href="#">C</a></li>
-                          <li><a href="#">C#</a></li>
-                          <li><a href="#">코딩 테스트</a></li>
-                          <li><a href="#">ES6</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">모바일 앱 개발</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">알고리즘</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">데이터 분석</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Swift</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C#</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">코딩 테스트</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">ES6</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">모바일 앱 개발</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="algorithm">알고리즘 · 자료구조</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="algorithm" tabindex="-1"
+                          >알고리즘 · 자료구조</a
+                        >
                         <ul
                           aria-labelledby="algorithm"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">알고리즘</a></li>
-                          <li><a href="#">코딩 테스트</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">자료구조</a></li>
-                          <li><a href="#">취업</a></li>
-                          <li><a href="#">객체지향</a></li>
-                          <li><a href="#">Python</a></li>
-                          <li><a href="#">C</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">C++</a></li>
-                          <li><a href="#">Scratch</a></li>
-                          <li><a href="#">게임개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">알고리즘</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">코딩 테스트</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">자료구조</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">취업</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">객체지향</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C++</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Scratch</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">게임개발</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="data-science">데이터 사이언스</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="data-science" tabindex="-1"
+                          >데이터 사이언스</a
+                        >
                         <ul
                           aria-labelledby="data-science"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">데이터 분석</a></li>
-                          <li><a href="#">머신러닝</a></li>
-                          <li><a href="#">딥러닝</a></li>
-                          <li><a href="#">Python</a></li>
-                          <li><a href="#">인공지능</a></li>
-                          <li><a href="#">Tensorflow</a></li>
-                          <li><a href="#">Pandas</a></li>
-                          <li><a href="#">Keras</a></li>
-                          <li><a href="#">SQL</a></li>
-                          <li><a href="#">컴퓨터 비전</a></li>
-                          <li><a href="">인공신경망</a></li>
-                          <li><a href="#">데이터 시각화</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">데이터 분석</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">머신러닝</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">딥러닝</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">인공지능</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Tensorflow</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Pandas</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Keras</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">SQL</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">컴퓨터 비전</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">인공신경망</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">데이터 시각화</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="database">데이터베이스</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="database" tabindex="-1">데이터베이스</a>
                         <ul
                           aria-labelledby="database"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">SQL</a></li>
-                          <li><a href="#">데이터베이스</a></li>
-                          <li><a href="#">데이터 분석</a></li>
-                          <li><a href="#">MySQL</a></li>
-                          <li><a href="#">RDBMS</a></li>
-                          <li><a href="#">MSSQL</a></li>
-                          <li><a href="#">Oracle</a></li>
-                          <li><a href="#">MongoDB</a></li>
-                          <li><a href="#">Python</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">JPA</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">SQL</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">데이터베이스</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">데이터 분석</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">MySQL</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">RDBMS</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">MSSQL</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Oracle</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">MongoDB</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Python</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">JPA</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="devtool">개발 도구</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="devtool" tabindex="-1">개발 도구</a>
                         <ul
                           aria-labelledby="devtool"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Git</a></li>
-                          <li><a href="#">버전관리시스템</a></li>
-                          <li><a href="#">Github</a></li>
-                          <li><a href="#">Jetbrains</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">IntelliJ IDEA</a></li>
-                          <li><a href="#">JUnit</a></li>
-                          <li><a href="#">Mockito</a></li>
-                          <li><a href="#">Testcontainers</a></li>
-                          <li><a href="#">JMeter</a></li>
-                          <li><a href="#">Chaos Monkey</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Git</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">버전관리시스템</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Github</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Jetbrains</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">IntelliJ IDEA</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">JUnit</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Mockito</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Testcontainers</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">JMeter</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Chaos Monkey</a>
+                          </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="devops">데브옵스 · 인프라</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="devops" tabindex="-1">데브옵스 · 인프라</a>
                         <ul
                           aria-labelledby="devops"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">AWS</a></li>
-                          <li><a href="#">DevOps</a></li>
-                          <li><a href="#">클라우드</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">Docker</a></li>
-                          <li><a href="#">Linux</a></li>
-                          <li><a href="#">Kubernetes</a></li>
-                          <li><a href="#">네트워크</a></li>
-                          <li><a href="#">서버리스</a></li>
-                          <li><a href="#">Azure</a></li>
-                          <li><a href="#">정보보안</a></li>
-                          <li><a href="#">Ansible</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">AWS</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">DevOps</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">클라우드</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Docker</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Linux</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Kubernetes</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">네트워크</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">서버리스</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Azure</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">정보보안</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Ansible</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="gamedev">게임 개발</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="gamedev" tabindex="-1">게임 개발</a>
                         <ul
                           aria-labelledby="gamedev"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">게임개발</a></li>
-                          <li><a href="#">Unity</a></li>
-                          <li><a href="#">C#</a></li>
-                          <li><a href="#">iOS</a></li>
-                          <li><a href="#">Unreal Engine</a></li>
-                          <li><a href="#">Swift</a></li>
-                          <li><a href="#">게임기획</a></li>
-                          <li><a href="#">C++</a></li>
-                          <li><a href="#">블록코딩</a></li>
-                          <li><a href="#">UE Blueprints</a></li>
-                          <li><a href="#">Scratch</a></li>
-                          <li><a href="#">게임수학</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">게임개발</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Unity</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C#</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">iOS</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Unreal Engine</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Swift</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">게임기획</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">C++</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">블록코딩</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">UE Blueprints</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Scratch</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">게임수학</a>
+                          </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" id="network">보안 &#183; 네트워크</a>
+                  <li role="none">
+                    <a href="#" role="menuitem" id="network" tabindex="0">보안 &#183; 네트워크</a>
                     <ul
                       aria-labelledby="network"
                       class="desktop-only header-container__list--lecture--two"
                     >
-                      <li>
-                        <a href="# " id="security">보안</a>
+                      <li role="none">
+                        <a href="# " id="security" tabindex="-1">보안</a>
                         <ul
                           aria-labelledby="security"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="system">시스템</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="system" tabindex="-1">시스템</a>
                         <ul
                           aria-labelledby="system"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="cloud">클라우드</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="cloud" tabindex="-1">클라우드</a>
                         <ul
                           aria-labelledby="cloud"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="blockchain">블록체인</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="blockchain" tabindex="-1">블록체인</a>
                         <ul
                           aria-labelledby="blockchain"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹앱</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="etc">기타</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="etc" tabindex="-1">기타</a>
                         <ul
                           aria-labelledby="etc"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="/courses/it/it-besides?skill=android">Android</a></li>
-                          <li>
-                            <a href="/courses/it/it-besides?skill=information-security">정보보안</a>
+                          <li role="none">
+                            <a href="/courses/it/it-besides?skill=android" tabindex="-1">Android</a>
                           </li>
-                          <li>
-                            <a href="/courses/it/it-besides?skill=cheat-engine">Cheat Engine</a>
+                          <li role="none">
+                            <a
+                              href="/courses/it/it-besides?skill=information-security"
+                              tabindex="-1"
+                              >정보보안</a
+                            >
                           </li>
-                          <li><a href="/courses/it/it-besides?skill=frida">Frida</a></li>
-                          <li>
-                            <a href="/courses/it/it-besides?skill=engineer-info-process"
+                          <li role="none">
+                            <a href="/courses/it/it-besides?skill=cheat-engine" tabindex="-1"
+                              >Cheat Engine</a
+                            >
+                          </li>
+                          <li role="none">
+                            <a href="/courses/it/it-besides?skill=frida" tabindex="-1">Frida</a>
+                          </li>
+                          <li role="none">
+                            <a
+                              href="/courses/it/it-besides?skill=engineer-info-process"
+                              tabindex="-1"
                               >정보처리기사</a
                             >
                           </li>
@@ -425,213 +620,278 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" id="data">데이터 사이언스</a>
+                  <li role="none">
+                    <a href="#" role="menuitem" id="data" tabindex="0">데이터 사이언스</a>
                     <ul
                       aria-labelledby="data"
                       class="desktop-only header-container__list--lecture--two"
                     >
-                      <li>
-                        <a href="#" id="analysis">데이터 분석</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="analysis" tabindex="-1">데이터 분석</a>
                         <ul
                           aria-labelledby="analysis"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="ai">인공지능</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="ai" tabindex="-1">인공지능</a>
                         <ul
                           aria-labelledby="ai"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">웹 퍼블리싱</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Java</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Node.js</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">React</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="visualation">데이터 시각화</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="visualation" tabindex="-1">데이터 시각화</a>
                         <ul
                           aria-labelledby="visualation"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="collect">데이터 수집 &#183; 처리</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="collect" tabindex="-1"
+                          >데이터 수집 &#183; 처리</a
+                        >
                         <ul
                           aria-labelledby="collect"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="data-etc">기타</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="data-etc" tabindex="-1">기타</a>
                         <ul
                           aria-labelledby="data-etc"
                           class="desktop-only header-container__list--lecture--three"
                         >
-                          <li><a href="#">Android</a></li>
-                          <li><a href="#">정보보안</a></li>
-                          <li><a href="#">Cheat Engine</a></li>
-                          <li><a href="#">Frida</a></li>
-                          <li><a href="#">정보처리기사</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li><a href="#">크리에이티브</a></li>
-                  <li><a href="#">직무 &#183; 마케팅</a></li>
-                  <li><a href="#">학문 · 외국어</a></li>
-                  <li>
-                    <a href="#" id="career">커리어</a>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">크리에이티브</a></li>
+                  <li role="none">
+                    <a href="#" role="menuitem" tabindex="0">직무 &#183; 마케팅</a>
+                  </li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">학문 · 외국어</a></li>
+                  <li role="none">
+                    <a href="#" role="menuitem" id="career" tabindex="0">커리어</a>
                     <ul aria-labelledby="career" class="desktop-only">
-                      <li>
-                        <a href="#" id="employment">취업 · 이직</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="employment" tabindex="-1">취업 · 이직</a>
                         <ul aria-labelledby="employment">
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="branding">개인 브랜딩</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="branding" tabindex="-1">개인 브랜딩</a>
                         <ul aria-labelledby="branding">
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#" id="founded">창업</a>
+                      <li role="none">
+                        <a href="#" role="menuitem" id="founded" tabindex="-1">창업</a>
                         <ul aria-labelledby="founded">
-                          <li><a href="#">HTML/CSS</a></li>
-                          <li><a href="#">Front-End</a></li>
-                          <li><a href="#">JavaScript</a></li>
-                          <li><a href="#">웹 개발</a></li>
-                          <li><a href="#">Back-End</a></li>
-                          <li><a href="#">웹 퍼블리싱</a></li>
-                          <li><a href="#">Java</a></li>
-                          <li><a href="#">Node.js</a></li>
-                          <li><a href="#">React</a></li>
-                          <li><a href="#">Spring</a></li>
-                          <li><a href="#">Vue.js</a></li>
-                          <li><a href="#">웹앱</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">HTML/CSS</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Front-End</a>
+                          </li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">JavaScript</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                          <li role="none">
+                            <a href="#" role="menuitem" tabindex="-1">Back-End</a>
+                          </li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                          <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" id="culture">교양</a>
+                  <li role="none">
+                    <a href="#" role="menuitem" id="culture" tabindex="0">교양</a>
                     <ul aria-labelledby="culture" class="desktop-only">
-                      <li><a href="#">HTML/CSS</a></li>
-                      <li><a href="#">Front-End</a></li>
-                      <li><a href="#">JavaScript</a></li>
-                      <li><a href="#">웹 개발</a></li>
-                      <li><a href="#">Back-End</a></li>
-                      <li><a href="#">웹 퍼블리싱</a></li>
-                      <li><a href="#">Java</a></li>
-                      <li><a href="#">Node.js</a></li>
-                      <li><a href="#">React</a></li>
-                      <li><a href="#">Spring</a></li>
-                      <li><a href="#">Vue.js</a></li>
-                      <li><a href="#">웹앱</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">HTML/CSS</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Front-End</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">JavaScript</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">웹 개발</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Back-End</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Back-End</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Spring</a></li>
+                      <li role="none"><a href="#" role="menuitem" tabindex="-1">Vue.js</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">청강대 게임스쿨</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">청강대 게임스쿨</a></li>
                 </ul>
               </li>
-              <li class="desktop-only"><a href="#">로드맵</a></li>
-              <li class="desktop-only"><a href="#">멘토링</a></li>
-              <li class="header-container__list--other desktop-only">
-                <a href="#" id="community">커뮤니티</a>
-                <ul aria-labelledby="community">
-                  <li><a href="#">질문 & 답변</a></li>
-                  <li><a href="#">자유주제</a></li>
-                  <li><a href="#">스터디</a></li>
-                  <li><a href="#">블로그</a></li>
+              <li role="none" class="desktop-only"><a href="#" role="menuitem">로드맵</a></li>
+              <li role="none" class="desktop-only"><a href="#" role="menuitem">멘토링</a></li>
+              <li role="none" class="header-container__list--other desktop-only">
+                <a href="#" role="menuitem" id="community" tabindex="0">커뮤니티</a>
+                <ul
+                  aria-labelledby="community"
+                  role="menu"
+                  class="header-container__list--lecture--one"
+                >
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">질문 & 답변</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">자유주제</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">스터디</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">블로그</a></li>
                 </ul>
               </li>
-              <li class="header-container__list--other desktop-only">
-                <a href="#" id="inflearn">인프런</a>
-                <ul aria-labelledby="inflearn">
-                  <li><a href="#">수강평</a></li>
-                  <li><a href="#">멘토링 후기</a></li>
-                  <li><a href="#">인프런 이야기</a></li>
-                  <li><a href="#">인프런 채용</a></li>
-                  <li><a href="#">인프런 소개</a></li>
+              <li role="none" class="header-container__list--other desktop-only">
+                <a href="#" role="menuitem" id="inflearn" tabindex="0">인프런</a>
+                <ul
+                  aria-labelledby="inflearn"
+                  role="menu"
+                  class="header-container__list--lecture--one"
+                >
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">수강평</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">멘토링 후기</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">인프런 이야기</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">인프런 채용</a></li>
+                  <li role="none"><a href="#" role="menuitem" tabindex="0">인프런 소개</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
         </div>
         <div class="header-container__right">
-          <form action="#" method="get" class="desktop-only">
+          <form action="#" method="get" class="desktop-only search-lecture">
             <input type="text" />
+            <button type="submit" aria-label="강의 검색">
+              <i class="far fa-search"></i>
+            </button>
           </form>
           <div class="link-container">
             <a href="#" title="지식공유참여 바로가기" role="button" class="desktop-only"
@@ -663,15 +923,35 @@
       </nav>
     </header>
     <main>
-      <div class="main-container">
-        <div class="commercial-slogan">
-          <h3 class="commercial-slogan__title">독서의 계절, 가을엔 강의 한편</h3>
-          <p class="commercial-slogan__under">붙잡고 싶은 가을,인프런과 함께해요.</p>
+      
+      <div class="main-visual">
+        <div class="commercial__container" aria-label="인프런 광고">
+          <a href="" role="tabpanel" aria-label="1 of 3" title="슬라이드 1">
+            <div class="commercial-slogan">
+              <span class="commercial-slogan__tag">함께해요</span>
+              <h3 class="commercial-slogan__title">함께 성장할<br />동료를 찾아요 🌿</h3>
+              <p class="commercial-slogan__under">
+                #우리 #함께성장해요<br />
+                #동료여어디계신가요?
+              </p>
+            </div>
+            <div class="commercial-image">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="images/인프런/슬라이드/[브랜드]채용이미지&광고리뉴얼_main_521.gif"
+                />
+                <img
+                  src="images/인프런/슬라이드/[브랜드]채용이미지&광고리뉴얼_main_628.gif"
+                  alt="인프런 구인 광고"
+                />
+              </picture>
+            </div>
+          </a>
         </div>
-        <div class="commercial-image">
-          <img class="commercial-image__slide" src="images/인프런/슬라이드/슬라이드2.png" alt="진로탐색">
-        </div>
-      </section>
+      </div>
+    <div class="main-container">
+        
       <section class="event">
         <h3 class="sr-only">진행 이벤트</h3>
         <div class="event-wrapper desktop-only">
@@ -687,8 +967,8 @@
             <li class="event-list-item"><button class="event-button"><i class="fas fa-chevron-down"></i></button></li>
           </ul>
         </div>
-        <div class="event-all desktop-only">
-          <div class="event-all-container">
+        <div class="event-all desktop-only hidden" role="dialog" aria-labelledby="event" aria-modal="true">
+          <div class="event-all-container" id="event">
             <div class="event-all-title">
               <h3 class="event-all__header">진행중인 모든 이벤트</h3>
               <button class="event-all__close">닫기</button>
@@ -722,6 +1002,7 @@
         </form>
       </section>
       <section class="tag-section">
+        <h3 class="sr-only">검색어 태그 출력 부분</h3>
         <ul class="tag-section-list desktop-only">
           <li class="tag-section-list-item"><a href="#">#MVC</a></li>
           <li class="tag-section-list-item"><a href="#">#Spring Boot</a></li>
@@ -735,37 +1016,46 @@
           <li class="tag-section-list-item"><a href="#">#JavaScript</a></li>
         </ul>
       </section>
-      <div class="modal">
-        <article class="login">
+  
+      <div class="modal hidden" role="dialog" aria-labelledby="login" aria-modal="true">
+        <article class="login" id="login">
+          <button class="login-exit"><i class="fas fa-times"></i></button>
           <h1 class="login-title">
             <span class="sr-only">인프런</span>
             <a href="#" title="인프런 메인 화면 이동하기">
-              <svg width="110" id="icon_brand_logo" class="brand_logo" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 433 90">
-                <path class="A"
-                  d="M79.1 31.6c-2-4.6-4.7-8.7-8.1-12.2-3.5-3.5-7.5-6.3-12.1-8.3S49.3 8 43.9 8c-5.2 0-10.2.9-14.9 2.9s-8.8 4.7-12.4 8.1c-3.6 3.5-6.4 7.5-8.4 12.1A37.14 37.14 0 0 0 5.1 46c0 5.2.9 10.2 2.9 14.9s4.7 8.8 8.2 12.4 7.6 6.4 12.2 8.4c4.7 2 9.6 3.1 14.9 3.1l38.3.3.3-38.5c.1-5.3-.9-10.3-2.8-15zM74 77.4l-30.7-.3c-4.2 0-8.2-.9-11.9-2.5s-7-3.9-9.8-6.7A32.99 32.99 0 0 1 15 58c-1.6-3.8-2.3-7.7-2.3-11.9 0-4.3.9-8.3 2.5-12s3.9-6.9 6.7-9.7c2.9-2.8 6.2-4.9 9.9-6.5 3.8-1.6 7.7-2.3 11.9-2.3 4.3 0 8.3.9 12 2.5s6.9 3.8 9.7 6.7c2.8 2.8 4.9 6.1 6.5 9.8s2.3 7.7 2.3 12L74 77.4z" />
-                <path class="A"
-                  d="M76.9 83.7c-.9 0-1.8-.3-2.5-1L27.6 35.1c-1.4-1.4-1.3-3.6 0-4.9 1.4-1.4 3.6-1.3 4.9 0l46.8 47.6c1.4 1.4 1.3 3.6 0 4.9-.6.7-1.5 1-2.4 1z" />
-                <path class="A"
-                  d="M43.1 47.3c-.4 0-.8-.1-1.2-.2-1.8-.7-2.8-2.7-2.1-4.5l6.3-17.3c.7-1.8 2.7-2.8 4.5-2.1s2.8 2.7 2.1 4.5L46.4 45c-.5 1.4-1.9 2.3-3.3 2.3zm12.2 16.2H33.5C31.6 63.5 30 62 30 60c0-1.9 1.6-3.5 3.5-3.5h21.8c1.9 0 3.5 1.6 3.5 3.5 0 2-1.5 3.5-3.5 3.5zm44.1-32.4V85H88.8V31.1h10.6zm5.6 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5zm76.1-26.2c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v5.5h21.6v10.7h-21.6V85h-10.7V36.4c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.3v10.7h-5.3c-2.1 0-4.2.4-6.2 1.2zm43.2-11.9V85h-10.7V9.5h10.7zM270.5 66l7.6 7.6-3.7 3.7c-2.6 2.6-5.5 4.5-8.8 5.9s-6.7 2-10.3 2-7-.7-10.3-2c-3.3-1.4-6.2-3.3-8.8-5.9s-4.6-5.6-5.9-8.9-1.9-6.7-1.9-10.1.6-6.8 1.9-10.1 3.2-6.2 5.9-8.9c2.6-2.6 5.6-4.6 8.9-5.9s6.7-2 10.1-2 6.8.7 10.1 2 6.3 3.3 8.9 5.9l3.7 3.7L248 72.9c3 1.5 6.3 2 9.7 1.5s6.4-2.1 8.9-4.6l3.9-3.8zm-26.8-19.3c-3.2 3.2-4.8 7-4.8 11.5 0 2.5.6 4.8 1.7 7.1l10.6-10.6 6.4-6.3 4.7-4.7c-3-1.5-6.3-2-9.7-1.6-3.3.5-6.3 2.1-8.9 4.6zm64.8-15.6c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.5 5.8a27.88 27.88 0 0 1 5.8 8.5c1.4 3.2 2.1 6.7 2.1 10.5v27h-26.9c-3.7 0-7.2-.7-10.4-2.1-3.3-1.4-6.2-3.3-8.6-5.8-2.5-2.5-4.4-5.4-5.8-8.6-1.4-3.3-2.1-6.8-2.1-10.4 0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.5 6.8-2.2 10.4-2.2zm16.2 43.2V58c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.3-1.3s-4.4.4-6.4 1.3c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3s.4 4.4 1.3 6.4c.8 2 2 3.7 3.5 5.2s3.2 2.6 5.2 3.5c2 .8 4.1 1.3 6.4 1.3h16.3zm46.2-43.2v10.7h-5.4c-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.8V58c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.6zm5.3 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5z" />
-              </svg>
+              <svg
+              width="110"
+              class="brand_logo"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 433 90"
+            >
+              <path
+                class="A"
+                d="M79.1 31.6c-2-4.6-4.7-8.7-8.1-12.2-3.5-3.5-7.5-6.3-12.1-8.3S49.3 8 43.9 8c-5.2 0-10.2.9-14.9 2.9s-8.8 4.7-12.4 8.1c-3.6 3.5-6.4 7.5-8.4 12.1A37.14 37.14 0 0 0 5.1 46c0 5.2.9 10.2 2.9 14.9s4.7 8.8 8.2 12.4 7.6 6.4 12.2 8.4c4.7 2 9.6 3.1 14.9 3.1l38.3.3.3-38.5c.1-5.3-.9-10.3-2.8-15zM74 77.4l-30.7-.3c-4.2 0-8.2-.9-11.9-2.5s-7-3.9-9.8-6.7A32.99 32.99 0 0 1 15 58c-1.6-3.8-2.3-7.7-2.3-11.9 0-4.3.9-8.3 2.5-12s3.9-6.9 6.7-9.7c2.9-2.8 6.2-4.9 9.9-6.5 3.8-1.6 7.7-2.3 11.9-2.3 4.3 0 8.3.9 12 2.5s6.9 3.8 9.7 6.7c2.8 2.8 4.9 6.1 6.5 9.8s2.3 7.7 2.3 12L74 77.4z"
+              />
+              <path
+                class="A"
+                d="M76.9 83.7c-.9 0-1.8-.3-2.5-1L27.6 35.1c-1.4-1.4-1.3-3.6 0-4.9 1.4-1.4 3.6-1.3 4.9 0l46.8 47.6c1.4 1.4 1.3 3.6 0 4.9-.6.7-1.5 1-2.4 1z"
+              />
+              <path
+                class="A"
+                d="M43.1 47.3c-.4 0-.8-.1-1.2-.2-1.8-.7-2.8-2.7-2.1-4.5l6.3-17.3c.7-1.8 2.7-2.8 4.5-2.1s2.8 2.7 2.1 4.5L46.4 45c-.5 1.4-1.9 2.3-3.3 2.3zm12.2 16.2H33.5C31.6 63.5 30 62 30 60c0-1.9 1.6-3.5 3.5-3.5h21.8c1.9 0 3.5 1.6 3.5 3.5 0 2-1.5 3.5-3.5 3.5zm44.1-32.4V85H88.8V31.1h10.6zm5.6 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5zm76.1-26.2c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v5.5h21.6v10.7h-21.6V85h-10.7V36.4c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.3v10.7h-5.3c-2.1 0-4.2.4-6.2 1.2zm43.2-11.9V85h-10.7V9.5h10.7zM270.5 66l7.6 7.6-3.7 3.7c-2.6 2.6-5.5 4.5-8.8 5.9s-6.7 2-10.3 2-7-.7-10.3-2c-3.3-1.4-6.2-3.3-8.8-5.9s-4.6-5.6-5.9-8.9-1.9-6.7-1.9-10.1.6-6.8 1.9-10.1 3.2-6.2 5.9-8.9c2.6-2.6 5.6-4.6 8.9-5.9s6.7-2 10.1-2 6.8.7 10.1 2 6.3 3.3 8.9 5.9l3.7 3.7L248 72.9c3 1.5 6.3 2 9.7 1.5s6.4-2.1 8.9-4.6l3.9-3.8zm-26.8-19.3c-3.2 3.2-4.8 7-4.8 11.5 0 2.5.6 4.8 1.7 7.1l10.6-10.6 6.4-6.3 4.7-4.7c-3-1.5-6.3-2-9.7-1.6-3.3.5-6.3 2.1-8.9 4.6zm64.8-15.6c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.5 5.8a27.88 27.88 0 0 1 5.8 8.5c1.4 3.2 2.1 6.7 2.1 10.5v27h-26.9c-3.7 0-7.2-.7-10.4-2.1-3.3-1.4-6.2-3.3-8.6-5.8-2.5-2.5-4.4-5.4-5.8-8.6-1.4-3.3-2.1-6.8-2.1-10.4 0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.5 6.8-2.2 10.4-2.2zm16.2 43.2V58c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.3-1.3s-4.4.4-6.4 1.3c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3s.4 4.4 1.3 6.4c.8 2 2 3.7 3.5 5.2s3.2 2.6 5.2 3.5c2 .8 4.1 1.3 6.4 1.3h16.3zm46.2-43.2v10.7h-5.4c-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.8V58c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.6zm5.3 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5z"
+              />
+            </svg>
             </a>
           </h1>
           <form action="#" method="get" class="login-form">
             <fieldset>
               <legend class="sr-only">로그인</legend>
-              <div class="login-form__id">
-                <input type="email" name="id" required>
-                <label>이메일 또는 아이디 입력</label>
+              <div class="login-form-id">
+                <label class="sr-only" for="id">이메일 또는 아이디 입력</label>
+                <input class="login-form-input" type="email" name="id" id="id" required placeholder="이메일 또는 아이디 입력">
               </div>
-              <div class="login-form__pwd">
-                <input type="password" name="password" required>
-                <label>비밀번호</label>
+              <div class="login-form-pwd">
+                <label class="sr-only" for="password">비밀번호</label>
+                <input class="login-form-input"  type="password" name="password" id="password" required placeholder="비밀번호">
                 <button type="button" class="login-form__toggle">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path fill="#212529" d="M10.333 8c0 1.289-1.044 2.333-2.333 2.333C6.71 10.333 5.667 9.29 5.667 8 5.667 6.711 6.71 5.667 8 5.667c1.289 0 2.333 1.044 2.333 2.333z"></path>
-                    <path fill="#212529" fill-rule="evenodd" d="M8 2.333c-2.288 0-4.083 1.023-5.37 2.16C1.348 5.63.544 6.902.22 7.469.03 7.8.03 8.2.22 8.533c.323.566 1.127 1.838 2.41 2.973 1.287 1.138 3.082 2.16 5.37 2.16 2.288 0 4.083-1.022 5.37-2.16 1.283-1.135 2.087-2.407 2.41-2.973.19-.333.19-.733 0-1.065-.323-.567-1.127-1.839-2.41-2.974-1.287-1.138-3.082-2.16-5.37-2.16zm-6.912 5.63c.295-.516 1.035-1.685 2.205-2.72C4.461 4.21 6.03 3.333 8 3.333c1.97 0 3.54.877 4.707 1.91 1.17 1.035 1.91 2.204 2.205 2.72.008.015.01.028.01.037 0 .01-.002.022-.01.037-.295.516-1.035 1.685-2.205 2.72-1.168 1.033-2.737 1.91-4.707 1.91-1.97 0-3.54-.877-4.707-1.91-1.17-1.035-1.91-2.204-2.205-2.72-.008-.015-.01-.028-.01-.037 0-.01.002-.022.01-.037z" clip-rule="evenodd"></path>
-                  </svg>
+                  <i class="far fa-eye toggle-icon"></i>
                 </button>
               </div>
               <button type="submit" class="login-button">로그인</button>
@@ -776,12 +1066,15 @@
             <a href="#" class="login-find__register">회원가입</a>
           </div>
           <div class="login-etc">
+            <hr class="login-etc-bar">
             <p class="login-etc__title">간편로그인</p>
-            <a href="#">카카오톡</a>
-            <a href="#">구글</a>
-            <a href="#">깃허브</a>
-            <a href="#">페이스북</a>
-            <a href="#">애플</a>
+            <div class="login-etc-list">
+              <a class="login-etc-item item-kakao" href="#" aria-label="카카오톡 로그인"><i class="fas fa-comments"></i></a>
+              <a class="login-etc-item item-google" href="#" aria-label="구글 로그인"><i class="fab fa-google"></i></a>
+              <a class="login-etc-item item-github" href="#" aria-label="깃허브 로그인"><i class="fab fa-github-square"></i></a>
+              <a class="login-etc-item item-facebook" href="#" aria-label="페이스북 로그인"><i class="fab fa-facebook-square"></i></a>
+              <a class="login-etc-item item-apple" href="#" aria-label="애플 로그인"><i class="fab fa-apple"></i></a>
+            </div>
           </div>
         </article>
       </div>

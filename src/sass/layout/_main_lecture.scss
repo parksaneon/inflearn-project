@@ -1,0 +1,72 @@
+@import '../utils/';
+@import '../components/card';
+
+.entry-lectures,
+.roadmap,
+.curation,
+.new-lectures {
+  margin-bottom: rem(60px);
+
+  &__title {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    .flexbox {
+      @include flexbox($items: center);
+    }
+  }
+
+  .title-tag {
+    color: $orange;
+    font-size: rem(12px);
+    font-weight: 700;
+    margin-right: rem(8px);
+  }
+
+  .fas {
+    font-size: rem(16px);
+  }
+
+  .description {
+    display: block;
+    margin-bottom: 1rem;
+    color: $gray200;
+    font-size: rem(15px);
+  }
+}
+
+.entry-lectures {
+  @include card;
+}
+
+.roadmap {
+  @include card(210px, 290.5px);
+}
+
+.curation {
+  @include card(299px, 394px);
+
+  &__title {
+    display: block;
+    color: $gray300;
+  }
+
+  &__paragraph {
+    @include multilineEllipsis;
+  }
+
+  .fas {
+    margin-left: rem(8px);
+  }
+
+  &-image__title {
+    @include textEllipsis;
+  }
+}
+
+.new-lectures {
+  @include card;
+}

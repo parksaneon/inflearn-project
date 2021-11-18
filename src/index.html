@@ -738,7 +738,6 @@
   
       <div class="modal hidden" role="dialog" aria-labelledby="login" aria-modal="true">
         <article class="login" id="login">
-          <button class="login-exit"><i class="fas fa-times"></i></button>
           <h1 class="login-title">
             <span class="sr-only">인프런</span>
             <a href="#" title="인프런 메인 화면 이동하기">
@@ -768,7 +767,7 @@
               <legend class="sr-only">로그인</legend>
               <div class="login-form-id">
                 <label class="sr-only" for="id">이메일 또는 아이디 입력</label>
-                <input class="login-form-input" type="email" name="id" id="id" required placeholder="이메일 또는 아이디 입력">
+                <input class="login-form-input" type="email" name="id" id="id" required placeholder="이메일 또는 아이디 입력" autocomplete="off">
               </div>
               <div class="login-form-pwd">
                 <label class="sr-only" for="password">비밀번호</label>
@@ -781,7 +780,7 @@
             </fieldset>
           </form>
           <div class="login-find">
-            <a href="#" class="login-find__pwd">비밀번호 찾기</a>
+            <a href="#" class="login-find__pwd">비밀번호 찾기 </a>
             <a href="#" class="login-find__register">회원가입</a>
           </div>
           <div class="login-etc">
@@ -795,6 +794,7 @@
               <a class="login-etc-item item-apple" href="#" aria-label="애플 로그인"><i class="fab fa-apple"></i></a>
             </div>
           </div>
+          <button class="login-exit"><i class="fas fa-times"></i></button>
         </article>
       </div>
         <section class="entry-lectures">

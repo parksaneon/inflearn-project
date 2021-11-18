@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 .modal {
   position: fixed;
@@ -16,6 +16,7 @@
 }
 
 .login {
+  position: relative;
   width: rem(360px);
   height: rem(432px);
   margin: auto;
@@ -31,12 +32,14 @@
   transform: translate(-50%, -50%);
 
   &-exit {
+    position: absolute;
     @include buttonReset();
     margin-left: rem(294px);
+    top: 5%;
   }
 
   &-title {
-    margin-top: rem(12px);
+    margin-top: rem(24px);
     margin-bottom: rem(24px);
     display: flex;
     justify-content: center;
@@ -146,7 +149,7 @@
 }
 
 .login-find__pwd::after {
-  content: "";
+  content: '';
   width: 1px;
   height: rem(10px);
   right: rem(55px);
@@ -155,11 +158,11 @@
 }
 
 $colors: (
-  "kakao": #fae500,
-  "google": #f8f8f8,
-  "github": #3c4043,
-  "facebook": #325ca6,
-  "apple": #fff,
+  'kakao': #fae500,
+  'google': #f8f8f8,
+  'github': #3c4043,
+  'facebook': #325ca6,
+  'apple': #fff,
 );
 
 //colors 변수를 순환하면서 값을 뽑아낸다

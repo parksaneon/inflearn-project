@@ -1,5 +1,5 @@
-@import '../utils/';
-@import '../components/card';
+@use '../utils/' as *;
+@use '../components' as *;
 
 .entry-lectures,
 .roadmap,

@@ -1,4 +1,4 @@
-@import '../utils/';
+@use '../utils/' as *;
 
 @mixin card($height: 315px, $imageWidth: 231px) {
   .swipe__container {

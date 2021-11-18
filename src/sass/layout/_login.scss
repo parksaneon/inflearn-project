@@ -7,8 +7,8 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
   z-index: 10;
+  @include posCenter;
 }
 
 .hidden {
@@ -48,7 +48,7 @@
       transform: translateY(3px);
 
       path {
-        fill: $green;
+        fill: $inflearn-green;
       }
     }
   }
@@ -61,7 +61,7 @@
     @include buttonReset();
     width: 100%;
     height: rem(48px);
-    background-color: $green;
+    background-color: $inflearn-green;
     color: $white;
     @include marginY(12px);
     @include paddingX(12px);

@@ -73,7 +73,7 @@
         transform: translateY(3px);
 
         path {
-          fill: $green;
+          fill: $inflearn-green;
         }
       }
     }
@@ -236,7 +236,7 @@
 
         > a:hover {
           font-weight: 700;
-          color: $green;
+          color: $inflearn-green;
         }
 
         &:hover {
@@ -284,8 +284,8 @@
 
         &:active,
         &:focus {
-          outline: $green;
-          border-color: $green;
+          outline: $inflearn-green;
+          border-color: $inflearn-green;
         }
 
         &:hover {

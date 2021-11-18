@@ -4,6 +4,11 @@ function modalControll(opens, closes, modals) {
   const modal = document.querySelector(modals);
 
   open.addEventListener('click', function () {
+    if (modals === '.modal') {
+      setTimeout(function () {
+        document.getElementById('id').focus();
+      }, 2);
+    }
     modal.classList.remove('hidden');
   });
 

@@ -92,10 +92,6 @@ button {
   cursor: pointer;
 }
 
-// img {
-//   @include respons;
-// }
-
 video {
   @include respons(width);
 }

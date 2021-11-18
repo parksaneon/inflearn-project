@@ -3,7 +3,7 @@
 @use '../utils/color' as *;
 
 .main-visual {
-  background-color: $green;
+  background-color: $inflearn-green;
 }
 .commercial__container {
   @include autoMargin;

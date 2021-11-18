@@ -1,19 +1,17 @@
 //  기본 색상 --------------------------------------------------------- /
 $white: #ffffff;
 $black: #101010;
-$darkbrown: #38302e;
-$brown: #988574;
 $lightbrown: #c7b39a;
-$green: #1dc078;
-$yellow: #e8ca58;
 $orange: #fa4c3d;
-$silver: #999;
+$inflearn-green: #47c880;
+$review-gray: #f9f9f9;
+$review-time: #979797;
+$lightpink: rgb(246, 213, 234);
+$footer-bg: #303740;
+$apricot: #ffc8c7;
 
-// 리뷰
-$inflearn-green:#47c880;
-$review-gray:#f9f9f9;
-$review-time:#979797;
-$gray:rgb(156, 156, 156);
+// gray
+$gray: rgb(156, 156, 156);
 $gray000: #ccc;
 $gray100: #767676;
 $gray200: #757575;
@@ -22,13 +20,14 @@ $gray400: rgb(89, 89, 89);
 $gray500: #e9ecef;
 $gray600: #f6f6f6;
 $gray700: #303740;
+$gray800: #bdbdbd;
+$gray900: #444;
 
-$bluegray: #9fbfdf;
+// blue
 $blue: rgb(23, 92, 190);
+$deepblue: #0033cc;
 $lightblue: rgb(228, 250, 251);
-$lightpink: rgb(246, 213, 234);
+$bluegray: #9fbfdf;
+
+// trans
 $transblack: rgba(0, 0, 0, 0.8);
-
-
-$footer-bg:#303740;
-$apricot: #ffc8c7;

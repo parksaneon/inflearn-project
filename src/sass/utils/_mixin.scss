@@ -1,20 +1,6 @@
-@use "./unit" as *;
-@use "./color" as *;
-@use "sass:math";
-
-// 고해상도 배경이미지 처리 ---------------------------------------------------- /
-@mixin bgRetina($file, $type, $width: 100%, $height: 100%) {
-  background-image: url('./../assets/images/' + $file + '.' + $type);
-  background-repeat: no-repeat;
-  background-size: $width $height;
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
-    & {
-      background-image: url('./../assets/images/' + $file + '@2x.' + #{$type});
-      background-size: $width $height;
-    }
-  }
-}
+@use './unit' as *;
+@use './color' as *;
+@use 'sass:math';
 
 // padding 관련 믹스인
 @mixin paddingY($paddingY: 0) {
@@ -52,16 +38,6 @@
   left: $l;
 }
 
-@mixin posCenterX() {
-  @include pos($l: 50%);
-  transform: translateX(-50%);
-}
-
-@mixin posCenterY() {
-  @include pos($t: 50%);
-  transform: translateY(-50%);
-}
-
 @mixin posCenter() {
   @include pos($t: 50%, $l: 50%);
   transform: translate(-50%, -50%);
@@ -86,58 +62,34 @@
   height: $h;
 }
 
-// 박스(컨테이너) 크기를 뷰포트 영역으로 확장시키는 믹스인
-@mixin boxSizeFull {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: initial;
-}
-
-// 박스의 최소 및 최대 너비를 설정하기 위한 믹스인
-@mixin boxSizeMinMax($min: 768px, $max: 1200px) {
-  min-width: $min;
-  max-width: $max;
-  @include autoMargin;
-}
-
 // 반응형 콘텐츠
 @mixin respons($width: max-width) {
   #{$width}: 100%;
   height: auto;
 }
 
-@mixin responsIframe($w: 16, $h: 9) {
-  position: relative;
-  padding-top: math.div($h, $w) * 100%;
-  height: auto !important;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
+// text-ellipsis
 @mixin textEllipsis() {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
+@mixin multilineEllipsis($clamp: 2, $lh: 1.4) {
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: $lh;
+}
 
-
-
-// apply 글꼴 
-@mixin applyFont{
+// apply 글꼴
+@mixin applyFont {
   font-size: rem(16px);
   color: $gray200;
   line-height: 1.4;
 
-  strong{
+  strong {
     font-size: rem(18px);
     font-weight: 700;
     color: $black;
@@ -146,27 +98,20 @@
   }
 }
 
-
-@mixin applyBtn{
-  font-size:rem(16px);
+@mixin applyBtn {
+  font-size: rem(16px);
   color: $white;
   font-weight: 700;
+  border: 2px solid $inflearn-green ;
   background: $inflearn-green;
   border-radius: rem(290486px);
   cursor: pointer;
   @include paddingX(16px);
-  @include paddingY(12px);
+  @include paddingY(10px);
 
-  i{
+  i {
     margin-left: rem(10px);
   }
-}  
-@mixin multilineEllipsis($clamp: 2, $lh: 1.4) {
-  display: -webkit-box;
-  -webkit-line-clamp: $clamp;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-height: $lh;
 }
 
 // 버튼 태그 아이콘들만 보이도록

@@ -67,12 +67,11 @@
   &__link {
     border: 1px solid $inflearn-green;
     color: $black;
-    border-radius: 3px;
+    border-radius: rem(3px);
     font-size: rem(16px);
     cursor: pointer;
     line-height: 1;
-    padding: 10px 16px;
-    @include flexbox($items: center);
+    padding: rem(10px) rem(16px);
 
     @include mobile {
       font-size: rem(12px);
@@ -128,6 +127,7 @@
     border: 1px solid $review-gray;
     box-shadow: rgb(0 10 18 / 10%) 0px 2px 3px, rgb(0 10 18 / 10%) 0px 0px 0px 1px;
     border-radius: 4px;
+
     @include mobile {
       width: auto;
     }
@@ -140,10 +140,16 @@
   &__id {
     color: $gray200;
     margin-right: rem(10px);
+    @include mobile {
+      font-size: rem(14px);
+    }
   }
   &__time {
     color: $review-time;
     font-size: rem(13px);
+    @include mobile {
+      font-size: rem(13px);
+    }
   }
   &__course {
     font-size: rem(17px);
@@ -151,13 +157,19 @@
 
     @include mobile {
       display: block;
+      font-size: rem(15px);
       @include textEllipsis;
     }
   }
+
   &__content {
     margin-top: rem(15px);
     font-size: rem(16px);
     line-height: 1.3;
+
+    @include mobile {
+      font-size: rem(14px);
+    }
   }
 }
 
@@ -188,6 +200,10 @@
     font-size: rem(16px);
     margin-bottom: rem(20px);
     line-height: 1.3;
+
+    @include mobile {
+      font-size: rem(14px);
+    }
   }
 
   &__link {
@@ -205,6 +221,11 @@
       font-size: rem(12px);
       @include paddingX(10px);
     }
+  }
+
+  &__link:hover {
+    background: $inflearn-green;
+    color: $white;
   }
 
   &__content {
@@ -307,6 +328,11 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    @include pad {
+      flex-direction: column;
+      padding-right: rem(10px);
+    }
   }
 
   &__item {
@@ -321,7 +347,14 @@
     margin-top: rem(15px);
 
     @include mobile {
+      flex-grow: 1;
       height: rem(290px);
+      max-width: 100%;
+    }
+    @include pad {
+      flex-grow: 1;
+      height: rem(290px);
+      max-width: 100%;
     }
   }
   &__title {
@@ -332,11 +365,23 @@
     @include applyFont;
   }
 
+  &__brief {
+    @include mobile {
+      font-size: rem(13px) !important;
+    }
+  }
+
   &__link {
     @include applyBtn;
     @include mobile {
       font-size: rem(13px);
     }
+  }
+
+  &__link:hover {
+    background-color: $white;
+    border: 2px solid $inflearn-green;
+    color: $inflearn-green;
   }
 }
 
@@ -346,6 +391,10 @@
   background: $footer-bg;
   width: 100%;
   color: $gray600;
+
+  a:hover {
+    color: $white;
+  }
 
   @include mobile {
     margin-bottom: rem(66px);
@@ -363,7 +412,7 @@
     @include paddingY(48px);
     @include paddingX(20px);
     @include flexbox($justify: space-between);
-    border-bottom: 1px solid $gray700;
+    border-bottom: 1px solid $gray900;
 
     @include mobile {
       flex-direction: column;
@@ -379,13 +428,9 @@
     line-height: 2;
     font-size: rem(14px);
 
-    a:hover {
-      color: $gray500;
-    }
-
     @include mobile {
       @include paddingY(16px);
-      border-bottom: 1px solid $gray700;
+      border-bottom: 1px solid $gray900;
 
       i {
         float: right;
@@ -401,13 +446,14 @@
     }
 
     a {
-      color: $gray600;
+      color: $gray800;
       font-weight: 500;
     }
   }
 
   &__info {
     font-size: rem(12px);
+    color: $gray800;
     @include paddingY(48px);
     @include paddingX(20px);
 
@@ -429,6 +475,7 @@
     @include flexbox($items: center);
     font-weight: 700;
     margin-bottom: rem(8px);
+
     @include mobile {
       justify-content: center;
     }
@@ -443,7 +490,6 @@
   &__divider::before {
     content: '|';
     display: inline-block;
-    color: $gray600;
     font-size: rem(12px);
     @include marginX(8px);
 
@@ -453,7 +499,7 @@
   }
 
   &__address {
-    line-height: 1.3;
+    line-height: 1.4;
     margin-bottom: rem(15px);
 
     @include mobile {
@@ -476,7 +522,7 @@
       width: rem(34px);
       height: rem(34px);
       border-radius: 100%;
-      background: $gray600;
+      background: $gray800;
       text-align: center;
       line-height: rem(34px);
       margin-left: rem(10px);
@@ -488,6 +534,9 @@
     }
     .fab {
       transform: translateY(17%);
+    }
+    a:hover {
+      background: $white;
     }
   }
 }

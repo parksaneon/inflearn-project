@@ -12,6 +12,12 @@ $break: 1000px;
   }
 }
 
+@mixin pad{
+  @media(max-width: #{$break - 1}){
+    @content;
+  }
+}
+
 .mobile-only {
   @include desktop {
     display: none !important;

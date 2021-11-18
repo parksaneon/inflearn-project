@@ -102,11 +102,12 @@
   font-size: rem(16px);
   color: $white;
   font-weight: 700;
+  border: 2px solid $inflearn-green ;
   background: $inflearn-green;
   border-radius: rem(290486px);
   cursor: pointer;
   @include paddingX(16px);
-  @include paddingY(12px);
+  @include paddingY(10px);
 
   i {
     margin-left: rem(10px);

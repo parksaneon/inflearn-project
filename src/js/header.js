@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mHeaderBtn = document.querySelector('.header-container__showList');
   const headerLinks = document.querySelectorAll('.header-container__list > li > a');
   const headerSubList = document.querySelectorAll('.header-container__list--lecture--one');
+  const headerSubListTwo = document.querySelectorAll('.header-container__list--lecture--two');
 
   let openNav = false;
   let focused = null;
@@ -30,10 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const removeOpen = () => {
+    document.querySelectorAll('.open').forEach((openMenu) => openMenu.classList.remove('open'));
+  };
+
   // header focus
   headerLinks.forEach((link) => {
     link.addEventListener('focusin', (e) => {
-      headerSubList.forEach((subList) => subList.classList.remove('open'));
+      removeOpen();
       focused = e.target.nextElementSibling ? e.target : null;
     });
   });
@@ -42,16 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const subLinks = Array.from(
       submenu.querySelectorAll('.header-container__list--lecture--one > li > a')
     );
+
     const lastMenuLink = subLinks[subLinks.length - 1];
 
     lastMenuLink.addEventListener('blur', () => {
       if (window.innerWidth > 1000 && focusDist === 'next') submenu.classList.remove('open');
     });
+
+    subLinks.forEach((oneLink) => {
+      oneLink.addEventListener('mouseover', (e) => {
+        removeOpen();
+        if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
+      });
+    });
+
+    submenu.addEventListener('mouseleave', (e) => {
+      e.target.classList.remove('open');
+    });
+  });
+
+  headerSubListTwo.forEach((dephTwo) => {
+    dephTwo.firstElementChild.firstElementChild.addEventListener('mouseover', (e) => {
+      if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
+    });
+
+    dephTwo.firstElementChild.firstElementChild.addEventListener('mouseleave', (e) => {
+      if (e.target.nextElementSibling) e.target.nextElementSibling.classList.remove('open');
+    });
   });
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && focused && focused.nextElementSibling && window.innerWidth > 1000) {
-      headerSubList.forEach((subList) => subList.classList.remove('open'));
+      removeOpen();
       focused.nextElementSibling.classList.add('open');
       focused.nextElementSibling.querySelector('a:first-child').focus();
       focused = null;
@@ -61,5 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
       focusDist = prevKey === 'Shift' ? 'prev' : 'next';
       prevKey = null;
     }
+  });
+
+  headerLinks.forEach((link) => {
+    link.addEventListener('mouseover', (e) => {
+      if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
+    });
   });
 });

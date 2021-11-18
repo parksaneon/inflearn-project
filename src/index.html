@@ -2044,10 +2044,27 @@
               </p>
             </div>
             <div class="commercial-image">
-              <picture>
-                <source media="(min-width: 768px)" srcset="images/slide/slide0.gif" />
-                <img src="images/slide/slide-mobile.gif" alt="인프런 구인 광고" />
-              </picture>
+              <video autoplay loop muted playsinline>
+                <source
+                  src="images/slide/slide0-web.webm"
+                  type="video/webm"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  src="images/slide/slide0-mp4.mp4"
+                  type="video/mp4"
+                  media="(min-width: 768px)"
+                />
+                <source src="images/slide/slide-mobile.webm" type="video/webm" />
+                <source src="images/slide/slide-mobile-mp4.mp4" type="video/mp4" />
+
+                <!-- <!-- <img
+                  src="images/slide/slide0.gif"
+                  alt="인프런 구인 광고"
+                  media="(min-width: 768px)"
+                /> -->
+                <img src="images/slide/slide0.gif" alt="인프런 구인 광고" />
+              </video>
             </div>
           </a>
         </div>

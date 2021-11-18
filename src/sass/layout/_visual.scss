@@ -17,9 +17,11 @@
       height: 250px;
     }
     height: 320px;
-    img {
+    img,
+    video {
       object-fit: cover;
       height: 100%;
+
       @include mobile {
         width: 100%;
       }

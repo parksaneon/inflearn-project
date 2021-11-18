@@ -1,84 +1,82 @@
 @use '../utils' as *;
 
-
 // 리뷰 section
-.review{
+.review {
   @include paddingY(24px);
   margin-bottom: rem(20px);
 
-  @include mobile{
+  @include mobile {
     @include paddingY(16px);
   }
 
-  &__container{
-    @include flexbox($justify:space-between);
+  &__container {
+    @include flexbox($justify: space-between);
     @include autoMargin();
     width: auto;
     position: relative;
 
-    @include mobile{
-      @include flexbox($direction:column);
+    @include mobile {
+      @include flexbox($direction: column);
       word-break: break-word;
     }
   }
 
-  &__left{
+  &__left {
     max-width: rem(480px);
     width: 100%;
     padding-right: rem(16px);
-    padding-left:0; 
+    padding-left: 0;
     @include paddingY(20px);
-    
 
-    @include mobile{
+    @include mobile {
       padding: 0;
       margin-bottom: rem(36px);
     }
   }
-  &__title{
+  &__title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.33;
 
-    strong{
-      color:$inflearn-green;
+    strong {
+      color: $inflearn-green;
     }
   }
 
-  &__brief{
-    color:$gray;
+  &__brief {
+    color: $gray;
     font-size: rem(16px);
     margin-top: rem(36px);
 
-    @include mobile{
+    @include mobile {
       margin-top: rem(32px);
       font-size: rem(15px);
     }
   }
 
-  &__button{
-    @include flexbox($wrap:wrap,$items:center);
-    color:$gray;
+  &__button {
+    @include flexbox($wrap: wrap, $items: center);
+    color: $gray;
     margin-top: 35px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: row;
     }
   }
 
-  &__link{
+  &__link {
     border: 1px solid $inflearn-green;
     color: $black;
     border-radius: 3px;
     font-size: rem(16px);
     cursor: pointer;
     line-height: 1;
-    padding:10px 16px;
-    @include flexbox($items:center);
+    padding: 10px 16px;
+    @include flexbox($items: center);
 
-    @include mobile{
+    @include mobile {
       font-size: rem(12px);
-      flex-grow:1;
+      flex-grow: 1;
       display: block;
       padding: 0;
       text-align: center;
@@ -86,39 +84,38 @@
       font-weight: 700;
     }
   }
-  &__link:hover{
-    background-color: rgba($inflearn-green,0.2);
+  &__link:hover {
+    background-color: rgba($inflearn-green, 0.2);
   }
 
-  &__link:nth-child(1){
+  &__link:nth-child(1) {
     margin-right: rem(10px);
   }
 
-  i{
+  i {
     margin-left: rem(5px);
   }
 
-
-  &__right{
+  &__right {
     height: rem(480px);
-    padding:rem(20px);
+    padding: rem(20px);
     position: relative;
     width: 100%;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    @include mobile{
+    @include mobile {
       padding: 0;
       margin-bottom: rem(36px);
     }
   }
 
-  &__right::-webkit-scrollbar{
+  &__right::-webkit-scrollbar {
     display: none;
   }
 
-  &__item{
+  &__item {
     @include paddingY(16px);
     @include paddingX(16px);
     margin: 5px 5px 20px 5px;
@@ -131,43 +128,42 @@
     border: 1px solid $review-gray;
     box-shadow: rgb(0 10 18 / 10%) 0px 2px 3px, rgb(0 10 18 / 10%) 0px 0px 0px 1px;
     border-radius: 4px;
-    @include mobile{
+    @include mobile {
       width: auto;
     }
   }
 
-  &__box{
+  &__box {
     margin-bottom: rem(15px);
-    @include flexbox($items:center);
+    @include flexbox($items: center);
   }
-  &__id{
+  &__id {
     color: $gray200;
     margin-right: rem(10px);
   }
-  &__time{
-    color:$review-time;
+  &__time {
+    color: $review-time;
     font-size: rem(13px);
   }
-  &__course{
+  &__course {
     font-size: rem(17px);
     font-weight: 600;
 
-    @include mobile{
+    @include mobile {
       display: block;
       @include textEllipsis;
     }
   }
-  &__content{
+  &__content {
     margin-top: rem(15px);
-    font-size:rem(16px);
+    font-size: rem(16px);
     line-height: 1.3;
   }
-
 }
 
-// 공유배너 section 
-.banner{
-  background: url(./../images/인프런/share-you.jpg) no-repeat 50% 50%;
+// 공유배너 section
+.banner {
+  background: url(./../images/share-you.jpg) no-repeat 50% 50%;
   background-size: cover;
   width: 100vw;
   position: relative;
@@ -176,118 +172,110 @@
   transform: translateX(-50%);
   @include paddingY(36px);
 
-  @include mobile{
+  @include mobile {
     @include paddingY(16px);
     @include paddingX(15px);
-  
   }
 
-  &__container{
+  &__container {
     max-width: rem(1171px);
     height: 100%;
     @include autoMargin;
     position: relative;
   }
 
-
-  &__title{
+  &__title {
     font-size: rem(16px);
     margin-bottom: rem(20px);
     line-height: 1.3;
   }
 
-  &__link{
+  &__link {
     display: inline-block;
     background: $white;
     color: $inflearn-green;
     border: none;
-    border-radius:4px;
+    border-radius: 4px;
     font-weight: 700;
     margin-top: rem(20px);
     @include paddingX(16px);
     @include paddingY(8px);
 
-    @include mobile{
+    @include mobile {
       font-size: rem(12px);
       @include paddingX(10px);
     }
   }
 
-
-  &__content{
-    @include flexbox($justify:flex-end,$items:center);
+  &__content {
+    @include flexbox($justify: flex-end, $items: center);
   }
 
-  &__button{
-    margin-left:35%;
+  &__button {
+    margin-left: 35%;
   }
 
-  
-  &__button button{
+  &__button button {
     border-radius: 3px;
-    border:0;
+    border: 0;
     background: rgba($white, 0.9);
     color: $gray000;
   }
-  &__button button:focus{
+  &__button button:focus {
     color: $gray700;
   }
 
-  
-  &__item{
+  &__item {
     border: 0;
     outline: 0;
     width: rem(13px);
     height: rem(13px);
     border-radius: 100%;
-    background:rgba($gray600,0.5);
+    background: rgba($gray600, 0.5);
   }
-  
 }
 
-
 // 기업광고 section
-.company{
+.company {
   padding: 50px 30px;
- 
-  &__brief{
+
+  &__brief {
     font-weight: 700;
     line-height: 1.4;
-    letter-spacing: -.2px;
+    letter-spacing: -0.2px;
     font-size: rem(24px);
     margin-bottom: rem(20px);
     text-align: center;
 
-    @include mobile{
+    @include mobile {
       line-height: 1.47;
       font-size: rem(15px);
       margin-bottom: rem(16px);
     }
   }
 
-  &__logo{
-    @include flexbox($justify:center,$wrap:wrap);
+  &__logo {
+    @include flexbox($justify: center, $wrap: wrap);
   }
 
-  img{
+  img {
     height: rem(40px);
     padding-bottom: rem(15px);
     filter: grayscale(1);
     @include paddingX(10px);
 
-    @include mobile{
+    @include mobile {
       height: rem(35px);
     }
   }
 
-  img:hover{
+  img:hover {
     filter: none;
   }
 }
 
-
 // 신청 section
-.apply{
+.apply {
   background: $review-gray;
   width: 100vw;
   position: relative;
@@ -296,34 +284,34 @@
   transform: translateX(-50%);
   @include paddingY(48px);
 
-  @include mobile{
+  @include mobile {
     @include paddingX(15px);
   }
 
-  &__container{
+  &__container {
     max-width: rem(1171px);
     height: 100%;
     position: relative;
     @include autoMargin;
-    p{
+    p {
       @include applyFont;
     }
   }
 
-  &__content{
-    @include flexbox($justify:space-between);
+  &__content {
+    @include flexbox($justify: space-between);
     min-width: 100%;
     width: auto;
 
-    @include mobile{
+    @include mobile {
       flex-wrap: wrap;
       justify-content: center;
     }
   }
 
-  &__item{
-    @include flexbox($justify:space-between);
-    padding:rem(48px);
+  &__item {
+    @include flexbox($justify: space-between);
+    padding: rem(48px);
     background: $white;
     max-width: rem(380px);
     height: rem(330px);
@@ -332,162 +320,158 @@
     border-radius: 4px;
     margin-top: rem(15px);
 
-    @include mobile{
+    @include mobile {
       height: rem(290px);
     }
-
   }
-  &__title{
-    @include flexbox($direction:column,$justify:space-between,$items:start);
+  &__title {
+    @include flexbox($direction: column, $justify: space-between, $items: start);
   }
-  &__title, &__brief{
+  &__title,
+  &__brief {
     @include applyFont;
   }
 
-  &__link{
+  &__link {
     @include applyBtn;
-    @include mobile{
+    @include mobile {
       font-size: rem(13px);
     }
   }
 }
 
-
 // footer
 
-.footer{
+.footer {
   background: $footer-bg;
   width: 100%;
   color: $gray600;
 
-
-  @include mobile{
+  @include mobile {
     margin-bottom: rem(66px);
   }
 
-  &__wrap{
+  &__wrap {
     max-width: rem(1171px);
     height: 100%;
     @include autoMargin;
     position: relative;
-    @include flexbox($direction:column);
+    @include flexbox($direction: column);
   }
 
-  &__list{
+  &__list {
     @include paddingY(48px);
     @include paddingX(20px);
-    @include flexbox($justify:space-between);
+    @include flexbox($justify: space-between);
     border-bottom: 1px solid $gray700;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       padding-bottom: 0;
       padding-top: rem(10px);
       border-bottom: 0;
     }
-
   }
 
-  &__item{
+  &__item {
     color: $gray500;
     font-weight: 700;
     line-height: 2;
     font-size: rem(14px);
 
-    a:hover{
+    a:hover {
       color: $gray500;
     }
 
-    @include mobile{
+    @include mobile {
       @include paddingY(16px);
       border-bottom: 1px solid $gray700;
 
-      i{
+      i {
         float: right;
         transform: translateY(50%);
       }
-      
-      ul{
+
+      ul {
         max-height: 0px;
-        @include flexbox($direction:column);
+        @include flexbox($direction: column);
         overflow: hidden;
-        transition: max-height .2s ease-in-out;
+        transition: max-height 0.2s ease-in-out;
       }
     }
-    
-    a{
+
+    a {
       color: $gray600;
       font-weight: 500;
     }
   }
 
-  &__info{
+  &__info {
     font-size: rem(12px);
     @include paddingY(48px);
     @include paddingX(20px);
 
-    @include mobile{
+    @include mobile {
       text-align: center;
     }
   }
 
-  &__logo{
-    svg{
-
-      width:rem(80px);
+  &__logo {
+    svg {
+      width: rem(80px);
       path {
         fill: $green;
       }
     }
   }
 
-  &__privacy{
-    @include flexbox($items:center);
+  &__privacy {
+    @include flexbox($items: center);
     font-weight: 700;
     margin-bottom: rem(8px);
-    @include mobile{
+    @include mobile {
       justify-content: center;
     }
   }
 
-  &__divider{
-    @include mobile{
+  &__divider {
+    @include mobile {
       margin-left: rem(4px);
     }
   }
 
-  &__divider::before{
-    content: "|";
+  &__divider::before {
+    content: '|';
     display: inline-block;
     color: $gray600;
     font-size: rem(12px);
     @include marginX(8px);
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
   }
 
-  &__address{
+  &__address {
     line-height: 1.3;
     margin-bottom: rem(15px);
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 0;
 
-      i{
+      i {
         margin-left: rem(4px);
       }
     }
   }
 
-  &__sns{
-    @include flexbox($items:center);
+  &__sns {
+    @include flexbox($items: center);
     width: rem(210px);
     float: right;
     transform: translateY(-100%);
 
-    a{
+    a {
       display: inline-block;
       width: rem(34px);
       height: rem(34px);
@@ -497,15 +481,13 @@
       line-height: rem(34px);
       margin-left: rem(10px);
     }
-    i{
+    i {
       font-size: rem(22px);
       font-weight: 700;
       color: $gray700;
     }
-    .fab{
+    .fab {
       transform: translateY(17%);
     }
   }
-
-
 }

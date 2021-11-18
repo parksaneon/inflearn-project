@@ -1,182 +1,206 @@
 @import '../utils/';
 
-.swipe-container {
-  width: 100%;
-  height: rem(315px);
-  position: relative;
-
-  .card-container {
+@mixin card($height: 315px, $imageWidth: 231px) {
+  .swipe__container {
     width: 100%;
-    height: 100%;
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari and Opera */
-    }
-  }
-
-  .swipe-button {
-    @include flexbox($justify: space-between);
-    @include positionY();
-    width: 100%;
-
-    &-left,
-    &-right {
-      @include wh($w: 3rem, $h: 3rem);
-      border: rem(1px) solid $gray000;
-      border-radius: rem(50%);
-      opacity: 0.8;
-    }
-
-    &-left {
-      transform: translateX(-50%);
-    }
-
-    &-right {
-      transform: translateX(50%);
-    }
-  }
-}
-
-.card {
-  &-link {
+    height: rem($height);
     position: relative;
-    width: rem(231px);
-    padding-right: rem(4px);
-    display: inline-block;
-    color: $gray300;
-    font-weight: 700;
-    cursor: pointer;
-  }
 
-  &-image-container {
-    margin-bottom: rem(10px);
-    line-height: 1.4;
-  }
+    .card__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
 
-  &-image {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
 
-  dd {
-    margin-bottom: rem(10px);
-  }
-
-  .stars {
-    font-size: rem(10px);
-
-    &-outer {
-      display: inline-block;
-      position: relative;
-      color: yellow;
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+      }
     }
 
-    &-inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      color: yellow;
+    .swipe__button {
+      @include flexbox($justify: space-between);
+      @include positionY();
       width: 100%;
 
-      .fas {
-        font-size: rem(10px);
+      &-left,
+      &-right {
+        @include wh($w: 3rem, $h: 3rem);
+        border: rem(1px) solid $gray000;
+        border-radius: rem(50%);
+        opacity: 0.8;
+      }
+
+      &-left {
+        transform: translateX(-50%);
+      }
+
+      &-right {
+        transform: translateX(50%);
       }
     }
   }
 
-  .lecture-price {
-    color: $blue;
-    font-weight: 700;
-    font-size: rem(14.4px);
-
-    .sale {
-      content: '₩' attr(data-sale);
-      font-weight: 500;
-      margin-right: rem(5px);
-      color: $gray400;
-    }
-  }
-
-  .tag-container {
-    display: flex;
-
-    .tag {
-      background-color: $lightpink;
+  .card {
+    &-link {
+      position: relative;
+      width: rem($imageWidth);
+      padding-right: rem(4px);
+      display: inline-block;
       color: $gray300;
-      font-size: rem(12px);
-      padding: rem(6px);
-      border-radius: rem(4px);
-    }
-  }
-
-  .on-sale {
-    @include pos($t: rem(10px), $r: rem(4px));
-    border: rem(1px) solid $white;
-    border-radius: rem(4px);
-    background: $orange;
-    color: $white;
-    font-weight: 900;
-    @include paddingY(5px);
-    @include paddingX(3px);
-  }
-
-  .card-dark {
-    @include pos($t: 0, $l: 0);
-    width: 99%;
-    height: 100%;
-    margin-right: rem(4px);
-    color: transparent;
-    text-indent: -9999px;
-    @include paddingY(15px);
-    @include paddingX(10px);
-
-    p {
-      margin-bottom: rem(10px);
-    }
-
-    &__title {
       font-weight: 700;
-      line-height: 1.2;
+      cursor: pointer;
     }
 
-    &__description {
-      font-size: rem(14px);
-      line-height: 1.5;
+    &-image__container {
+      margin-bottom: rem(10px);
+      line-height: 1.4;
+    }
+
+    &-image {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    &-image__description {
+      @include multilineEllipsis;
     }
 
     dd {
-      margin-bottom: 0;
-      line-height: 1.5;
-      color: $bluegray;
+      margin-bottom: rem(10px);
+    }
 
-      [class^='fa'] {
-        margin-right: rem(4px);
+    .stars {
+      font-size: rem(10px);
+
+      &-outer {
+        display: inline-block;
+        position: relative;
+        color: yellow;
+      }
+
+      &-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: yellow;
+        width: 100%;
+
+        .fas {
+          font-size: rem(10px);
+        }
       }
     }
 
-    &:hover {
-      background: $transblack;
+    .lecture-instructor {
+      color: $gray100;
+    }
+
+    .lecture-price {
+      color: $blue;
+      font-weight: 700;
+      font-size: rem(14.4px);
+
+      .sale {
+        content: '₩' attr(data-sale);
+        font-weight: 500;
+        margin-right: rem(5px);
+        color: $gray400;
+      }
+    }
+
+    .tag__container {
+      display: flex;
+
+      .tag {
+        [class^='tag-'] {
+          color: $gray300;
+          font-size: rem(12px);
+          padding: rem(6px);
+          margin-right: rem(4px);
+          border-radius: rem(4px);
+        }
+
+        &-pink {
+          background-color: $lightpink;
+        }
+
+        &-blue {
+          background-color: $lightblue;
+        }
+
+        &-apricot {
+          background-color: $apricot;
+        }
+      }
+    }
+
+    .on-sale {
+      @include pos($t: rem(10px), $r: rem(4px));
+      border: rem(1px) solid $white;
+      border-radius: rem(4px);
+      background: $orange;
       color: $white;
-      font-size: rem(14px);
-      text-indent: 0;
+      font-weight: 900;
+      @include paddingY(5px);
+      @include paddingX(3px);
     }
 
-    .card-icons {
-      @include flexbox($direction: column, $items: flex-end);
+    .card-dark {
+      @include pos($t: 0, $l: 0);
+      width: 99%;
+      height: 100%;
+      margin-right: rem(4px);
+      color: transparent;
+      text-indent: -9999px;
+      @include paddingY(15px);
+      @include paddingX(10px);
 
-      [class^='fa'] {
-        margin-bottom: rem(4px);
+      p {
+        margin-bottom: rem(10px);
       }
-      [class^='fa']:hover {
-        color: $orange;
+
+      &__title {
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      &__description {
+        font-size: rem(14px);
+        line-height: 1.5;
+      }
+
+      dd {
+        margin-bottom: 0;
+        line-height: 1.5;
+        color: $bluegray;
+
+        [class^='fa'] {
+          margin-right: rem(4px);
+        }
+      }
+
+      &:hover {
+        background: $transblack;
+        color: $white;
+        font-size: rem(14px);
+        text-indent: 0;
+      }
+
+      .card-icons {
+        @include flexbox($direction: column, $items: flex-end);
+
+        [class^='fa'] {
+          margin-bottom: rem(4px);
+        }
+        [class^='fa']:hover {
+          color: $orange;
+        }
       }
     }
   }

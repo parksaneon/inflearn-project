@@ -1,18 +1,10 @@
-@use './../utils' as *;
+@use '../utils' as *;
 
-main {
-  @include mobile {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .main-container {
-    max-width: rem(1171px);
-    margin: 0 auto;
-  }
-}
 
+// 리뷰 section
 .review{
   @include paddingY(24px);
+  margin-bottom: rem(20px);
 
   @include mobile{
     @include paddingY(16px);
@@ -91,6 +83,7 @@ main {
       padding: 0;
       text-align: center;
       line-height: 3.5;
+      font-weight: 700;
     }
   }
   &__link:hover{
@@ -144,11 +137,12 @@ main {
   }
 
   &__box{
-    margin-bottom: 10px;
+    margin-bottom: rem(15px);
+    @include flexbox($items:center);
   }
   &__id{
-    color: $review-id-gaay;
-    margin-right: 5px;
+    color: $gray200;
+    margin-right: rem(10px);
   }
   &__time{
     color:$review-time;
@@ -160,19 +154,18 @@ main {
 
     @include mobile{
       display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      @include textEllipsis;
     }
   }
   &__content{
-    margin-top: 8px;
+    margin-top: rem(15px);
     font-size:rem(16px);
     line-height: 1.3;
   }
 
 }
 
+// 공유배너 section 
 .banner{
   background: url(./../images/인프런/share-you.jpg) no-repeat 50% 50%;
   background-size: cover;
@@ -181,22 +174,79 @@ main {
   left: 50%;
   height: auto;
   transform: translateX(-50%);
-  margin-top: rem(20px);
-  @include paddingY(40px);
+  @include paddingY(36px);
 
   @include mobile{
     @include paddingY(16px);
+    @include paddingX(15px);
   
   }
 
-
-  &__list{
-    @include flexbox;
+  &__container{
+    max-width: rem(1171px);
+    height: 100%;
+    @include autoMargin;
+    position: relative;
   }
 
+
+  &__title{
+    font-size: rem(16px);
+    margin-bottom: rem(20px);
+    line-height: 1.3;
+  }
+
+  &__link{
+    display: inline-block;
+    background: $white;
+    color: $inflearn-green;
+    border: none;
+    border-radius:4px;
+    font-weight: 700;
+    margin-top: rem(20px);
+    @include paddingX(16px);
+    @include paddingY(8px);
+
+    @include mobile{
+      font-size: rem(12px);
+      @include paddingX(10px);
+    }
+  }
+
+
+  &__content{
+    @include flexbox($justify:flex-end,$items:center);
+  }
+
+  &__button{
+    margin-left:35%;
+  }
+
+  
+  &__button button{
+    border-radius: 3px;
+    border:0;
+    background: rgba($white, 0.9);
+    color: $gray000;
+  }
+  &__button button:focus{
+    color: $gray700;
+  }
+
+  
+  &__item{
+    border: 0;
+    outline: 0;
+    width: rem(13px);
+    height: rem(13px);
+    border-radius: 100%;
+    background:rgba($gray600,0.5);
+  }
   
 }
 
+
+// 기업광고 section
 .company{
   padding: 50px 30px;
  
@@ -229,28 +279,233 @@ main {
       height: rem(35px);
     }
   }
+
+  img:hover{
+    filter: none;
+  }
 }
 
+
+// 신청 section
 .apply{
   background: $review-gray;
   width: 100vw;
   position: relative;
   left: 50%;
   height: auto;
-  margin-left: -50vw;
-  @include paddingY(40px);
+  transform: translateX(-50%);
+  @include paddingY(48px);
+
+  @include mobile{
+    @include paddingX(15px);
+  }
 
   &__container{
-    max-width: 1200px;
-    @include paddingY(0);
-    @include paddingX(10px);
+    max-width: rem(1171px);
+    height: 100%;
+    position: relative;
+    @include autoMargin;
+    p{
+      @include applyFont;
+    }
   }
 
+  &__content{
+    @include flexbox($justify:space-between);
+    min-width: 100%;
+    width: auto;
+
+    @include mobile{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item{
+    @include flexbox($justify:space-between);
+    padding:rem(48px);
+    background: $white;
+    max-width: rem(380px);
+    height: rem(330px);
+    width: auto;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    border-radius: 4px;
+    margin-top: rem(15px);
+
+    @include mobile{
+      height: rem(290px);
+    }
+
+  }
   &__title{
-    color: $black;
-    margin-bottom: rem(4px);
-    font-size: rem(15px);
+    @include flexbox($direction:column,$justify:space-between,$items:start);
+  }
+  &__title, &__brief{
+    @include applyFont;
+  }
+
+  &__link{
+    @include applyBtn;
+    @include mobile{
+      font-size: rem(13px);
+    }
+  }
+}
+
+
+// footer
+
+.footer{
+  background: $footer-bg;
+  width: 100%;
+  color: $gray600;
+
+
+  @include mobile{
+    margin-bottom: rem(66px);
+  }
+
+  &__wrap{
+    max-width: rem(1171px);
+    height: 100%;
+    @include autoMargin;
+    position: relative;
+    @include flexbox($direction:column);
+  }
+
+  &__list{
+    @include paddingY(48px);
+    @include paddingX(20px);
+    @include flexbox($justify:space-between);
+    border-bottom: 1px solid $gray700;
+
+    @include mobile{
+      flex-direction: column;
+      padding-bottom: 0;
+      padding-top: rem(10px);
+      border-bottom: 0;
+    }
 
   }
-  
+
+  &__item{
+    color: $gray500;
+    font-weight: 700;
+    line-height: 2;
+    font-size: rem(14px);
+
+    a:hover{
+      color: $gray500;
+    }
+
+    @include mobile{
+      @include paddingY(16px);
+      border-bottom: 1px solid $gray700;
+
+      i{
+        float: right;
+        transform: translateY(50%);
+      }
+      
+      ul{
+        max-height: 0px;
+        @include flexbox($direction:column);
+        overflow: hidden;
+        transition: max-height .2s ease-in-out;
+      }
+    }
+    
+    a{
+      color: $gray600;
+      font-weight: 500;
+    }
+  }
+
+  &__info{
+    font-size: rem(12px);
+    @include paddingY(48px);
+    @include paddingX(20px);
+
+    @include mobile{
+      text-align: center;
+    }
+  }
+
+  &__logo{
+    svg{
+
+      width:rem(80px);
+      path {
+        fill: $green;
+      }
+    }
+  }
+
+  &__privacy{
+    @include flexbox($items:center);
+    font-weight: 700;
+    margin-bottom: rem(8px);
+    @include mobile{
+      justify-content: center;
+    }
+  }
+
+  &__divider{
+    @include mobile{
+      margin-left: rem(4px);
+    }
+  }
+
+  &__divider::before{
+    content: "|";
+    display: inline-block;
+    color: $gray600;
+    font-size: rem(12px);
+    @include marginX(8px);
+
+    @include mobile{
+      display: none;
+    }
+  }
+
+  &__address{
+    line-height: 1.3;
+    margin-bottom: rem(15px);
+
+    @include mobile{
+      margin-bottom: 0;
+
+      i{
+        margin-left: rem(4px);
+      }
+    }
+  }
+
+  &__sns{
+    @include flexbox($items:center);
+    width: rem(210px);
+    float: right;
+    transform: translateY(-100%);
+
+    a{
+      display: inline-block;
+      width: rem(34px);
+      height: rem(34px);
+      border-radius: 100%;
+      background: $gray600;
+      text-align: center;
+      line-height: rem(34px);
+      margin-left: rem(10px);
+    }
+    i{
+      font-size: rem(22px);
+      font-weight: 700;
+      color: $gray700;
+    }
+    .fab{
+      transform: translateY(17%);
+    }
+  }
+
+
 }

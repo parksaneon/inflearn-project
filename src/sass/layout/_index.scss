@@ -2,7 +2,7 @@
 @forward "./header";
 @forward "./search";
 @forward "./entry_lecture";
-@use "../utils/" as *;
+@use "../utils" as *;
 
 main {
   @include mobile {

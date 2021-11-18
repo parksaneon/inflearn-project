@@ -144,7 +144,7 @@
       @include pos($t: rem(10px), $r: rem(4px));
       border: rem(1px) solid $white;
       border-radius: rem(4px);
-      background: $orange;
+      background: $deepblue;
       color: $white;
       font-weight: 900;
       @include paddingY(5px);
@@ -199,7 +199,7 @@
           margin-bottom: rem(4px);
         }
         [class^='fa']:hover {
-          color: $orange;
+          color: $deepblue;
         }
       }
     }

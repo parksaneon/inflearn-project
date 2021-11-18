@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const header = document.querySelector('.header');
+  const heaederList = document.querySelector('.header-container__list');
   const mHeaderBtn = document.querySelector('.header-container__showList');
   const headerLinks = document.querySelectorAll('.header-container__list > li > a');
   const headerSubList = document.querySelectorAll('.header-container__list--lecture--one');
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let focused = null;
   let focusDist = null;
   let prevKey = null;
+  let openSub = false;
 
   // mobile header nav
   mHeaderBtn.addEventListener('click', (e) => {
@@ -57,12 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     subLinks.forEach((oneLink) => {
       oneLink.addEventListener('mouseover', (e) => {
         removeOpen();
+        openSub = true;
         if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
       });
     });
 
     submenu.addEventListener('mouseleave', (e) => {
       e.target.classList.remove('open');
+      openSub = false;
     });
   });
 
@@ -90,8 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  heaederList.addEventListener('mouseleave', (e) => {
+    removeOpen();
+  });
+
   headerLinks.forEach((link) => {
     link.addEventListener('mouseover', (e) => {
+      removeOpen();
       if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
     });
   });

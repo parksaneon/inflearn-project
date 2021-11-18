@@ -1,5 +1,6 @@
-@use './unit' as *;
-@use 'sass:math';
+@use "./unit" as *;
+@use "./color" as *;
+@use "sass:math";
 
 // 고해상도 배경이미지 처리 ---------------------------------------------------- /
 @mixin bgRetina($file, $type, $width: 100%, $height: 100%) {
@@ -127,6 +128,39 @@
   text-overflow: ellipsis;
 }
 
+
+
+
+// apply 글꼴 
+@mixin applyFont{
+  font-size: rem(16px);
+  color: $gray200;
+  line-height: 1.4;
+
+  strong{
+    font-size: rem(18px);
+    font-weight: 700;
+    color: $black;
+    display: block;
+    padding-bottom: rem(10px);
+  }
+}
+
+
+@mixin applyBtn{
+  font-size:rem(16px);
+  color: $white;
+  font-weight: 700;
+  background: $inflearn-green;
+  border-radius: rem(290486px);
+  cursor: pointer;
+  @include paddingX(16px);
+  @include paddingY(12px);
+
+  i{
+    margin-left: rem(10px);
+  }
+}  
 @mixin multilineEllipsis($clamp: 2, $lh: 1.4) {
   display: -webkit-box;
   -webkit-line-clamp: $clamp;

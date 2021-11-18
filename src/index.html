@@ -2683,10 +2683,10 @@
                 <p class="review__title"><strong> 627,760</strong> 명이<br/>인프런과 함께합니다.</p>
                 <p class="review__brief">
                   인프런은 강의의 수강생수, 평점을 투명하게 공개합니다.
-                  </br>
+                  <br/>
                   실제로 많은 온오프라인 학원들은 단기적 성과를 높이기 위해 잘나온
                   특정 후기만 노출 하거나, 아예 숨겨버리는 경우가 많습니다.
-                  </br>
+                  <br/>
                   반면 인프런은 강의에 대한 후기, 학생수 등 정보를 투명하게 공개합니다.
                   신뢰성을 바탕으로 학습자들이 더 좋은 컨텐츠를 선택하고 교육의
                   질을 높입니다.
@@ -2777,23 +2777,27 @@
         <section class="banner">
           <h2 class="sr-only">지식공유</h2>
           <div class="banner__container">
-            <p class="banner__title">
-              지식을 나눠주세요.
-              <br/>
-              쉽게 시작하고 합당한 보상을 받을 수 있어요.
-            </p>
-            <a class="banner__link" href="#">지식공유 알아보기</a>
-          </div>
-          <ul class="banner__list">
-            <li class="banner__item"><button class="banner__button"></button></li>
-            <li class="banner__item"><button class="banner__button"></button></li>
-            <li class="banner__item"><button class="banner__button"></button></li>
-            <li class="banner__item"><button class="banner__button"></button></li>
-          </ul>
-          <div class="banner__container">
-            <button class="button-prev">이전 이벤트 보기</button>
-            <button class="button-prev">다음 이벤트 보기</button>
-          </div>
+            <div class="banner__title">
+              <p>
+                지식을 나눠주세요.
+                <br/>
+                쉽게 시작하고 합당한 보상을 받을 수 있어요.
+              </p>
+              <a class="banner__link" href="#">지식공유 알아보기</a>
+            </div>  
+            <div class="banner__content">
+              <div class="banner__dots">
+                <button class="banner__item"></button>
+                <button class="banner__item"></button>
+                <button class="banner__item"></button>
+                <button class="banner__item"></button>
+              </div>
+              <div class="banner__button desktop-only">
+                <button class="button--prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="button--next"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>    
         </section>
         <section class="company">
           <h2 class="sr-only">광고</h2>
@@ -2816,44 +2820,57 @@
         <section class="apply">
           <h2 class="sr-only">인프런 지식공유자, 비즈니스, 대학생 신청밥법</h2>
           <div class="apply__container">
-            <p class="apply__title">
-              <strong>다양한 서비스를 신청하세요.</strong>
-              <br/>
-              인프런의 지식공유자'비즈니스'대학생 신청방법에 대해 알아보세요.
-            </p>
-            <div class="apply__item">
+            <div class="apply__title">
               <p class="apply__brief">
-                <strong>지식공유자 되기</strong>9개월간 온라인 기술 강의로만 1억원!
-                나의 지식을 나눠 사람들에게 배움의 기회를 주고, 의미있는 대가를
-                가져가세요.
+                <strong>다양한 서비스를 신청하세요.</strong>
+                <br/>
+                인프런의 지식공유자'비즈니스'대학생 신청방법에 대해 알아보세요.
               </p>
-              <a class="apply__link" href="#">지식공유자 참여하기</a>
-            </div>
-            <div class="apply__item">
-              <p class="apply__brief">
-                <strong>지식공유자 되기</strong>9개월간 온라인 기술 강의로만 1억원!
-                나의 지식을 나눠 사람들에게 배움의 기회를 주고, 의미있는 대가를
-                가져가세요.
-              </p>
-              <a class="apply__link" href="#">지식공유자 참여하기</a>
-            </div>
-            <div class="apply__item">
-              <p class="apply__brief">
-                <strong>지식공유자 되기</strong>9개월간 온라인 기술 강의로만 1억원!
-                나의 지식을 나눠 사람들에게 배움의 기회를 주고, 의미있는 대가를
-                가져가세요.
-              </p>
-              <a class="apply__link" href="#">지식공유자 참여하기</a>
-            </div>
+            </div>  
+            <div class="apply__content">
+              <div class="apply__item">
+                <div class="apply__title">
+                  <p class="apply__brief">
+                    <strong>지식공유자 되기</strong>
+                    9개월간 온라인 기술 강의로만 1억원!<br/>
+                    나의 지식을 나눠 사람들에게 배움의 기회<br/>
+                    를 주고, 의미있는 대가를 가져가세요.
+                  </p>
+                  <a class="apply__link" href="#">지식공유자 참여하기<i class="fas fa-arrow-right"></i></a>
+                </div>  
+              </div>
+              <div class="apply__item">
+                <div class="apply__title">
+                  <p class="apply__brief">
+                    <strong>인프런 비즈니스 신청</strong>
+                    모든 팀원의 인프런의 강의들을 자유롭게<br/>
+                    학습하는 환경을 제공해주세요.
+                  </p>
+                  <a class="apply__link" href="#">비즈니스 신청하기<i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="apply__item">
+                <div class="apply__title">
+                  <p class="apply__brief">
+                    <strong>인프런 X 대학생</strong>
+                    학교와 인프런이 함께 하여,<br/>
+                    많은 학생 분들께 정해진 커리큘럼 이외에도 필요한 학습을 보완하고,<br/>
+                    더욱 성장할 수 있도록 도와드립니다.
+                  </p>
+                  <a class="apply__link" href="#">대학생 신청하기<i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>  
           </div>
         </section>
       </div>  
     </main>
     
-    <footer>
-      <div class="footer">
+    <footer class="footer">
+      <div class="footer__wrap">
         <ul class="footer__list">
-          <li class="__">인프런
+          <li class="footer__item">인프런
+            <i class="fas fa-chevron-down mobile-only"></i>
             <ul>
               <li><a href="#">공지사항</a></li>
               <li><a href="#">인프런 소개</a></li>
@@ -2861,93 +2878,94 @@
               <li><a href="#">채용 안내</a></li>
             </ul>
           </li>
+          <li class="footer__item">고객센터
+            <i class="fas fa-chevron-down mobile-only"></i>
+            <ul>
+              <li><a href="#">자주묻는 질문</a></li>
+              <li><a href="#">수료증 확인</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보취급방침</a></li>
+            </ul>
+          </li>
+          <li class="footer__item">신청하기
+            <i class="fas fa-chevron-down mobile-only"></i>
+            <ul>
+              <li><a href="#">지식공유참여</a></li>
+              <li><a href="#">인프런 비즈니스</a></li>
+              <li><a href="#">인프런 X 대학교</a></li>
+            </ul>
+          </li>
+          <li class="footer__item desktop-only">학습하기
+            <ul>
+              <li><a href="#">IT 프로그래밍</a></li>
+              <li><a href="#">크리에이티브</a></li>
+              <li><a href="#">업무스킬</a></li>
+              <li><a href="#">수강코드 등록</a></li>
+            </ul>
+          </li>
+          <li class="footer__item desktop-only">커뮤니티
+            <ul>
+              <li><a href="#">학습로드맵</a></li>
+              <li><a href="#">질문 & 답변</a></li>
+              <li><a href="#">수강평 모아보기</a></li>
+              <li><a href="#">강의 기능요청</a></li>
+            </ul>
+          </li>  
         </ul>    
-  
-     
-          <ul>
-            <li>고객센터
-              <ul>
-                <li><a href="#">자주묻는 질문</a></li>
-                <li><a href="#">수료증 확인</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보취급방침</a></li>
-              </ul>
-            </li>  
-          </ul>  
-      
-          <ul>
-            <li>신청하기
-              <ul>
-                <li><a href="#">지식공유참여</a></li>
-                <li><a href="#">인프런 비즈니스</a></li>
-                <li><a href="#">인프런 X 대학교</a></li>
-              </ul>
-            </li>
-          </ul>    
-      
-          <ul>
-            <li>학습하기
-              <ul>
-                <li><a href="#">IT 프로그래밍</a></li>
-                <li><a href="#">크리에이티브</a></li>
-                <li><a href="#">업무스킬</a></li>
-                <li><a href="#">수강코드 등록</a></li>
-              </ul>
-            </li>
-          </ul>    
-      
-          <ul>
-            <li>커뮤니티
-              <ul>
-                <li><a href="#">학습로드맵</a></li>
-                <li><a href="#">질문 & 답변</a></li>
-                <li><a href="#">수강평 모아보기</a></li>
-                <li><a href="#">강의 기능요청</a></li>
-              </ul>
-            </li>
-          </ul>
-        <div>
-          <a href="#" class="footer-logo"> <img src="#" alt="인프런로고" /></a>
-          <ul>
-            <li><a href="#">개인정보취급방침</a></li>
-            <li><a href="#">이용약관</a></li>
-          </ul>
-          <address class="adress">
+
+        <div class="footer__info">
+          <div class="footer__privacy">
+            <a href="https://www.inflearn.com/" class="footer__logo desktop-only">
+              <svg
+                width="110"
+                id="icon_brand_logo"
+                class="brand_logo"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 433 90"
+              >
+                <path
+                  class="A"
+                  d="M79.1 31.6c-2-4.6-4.7-8.7-8.1-12.2-3.5-3.5-7.5-6.3-12.1-8.3S49.3 8 43.9 8c-5.2 0-10.2.9-14.9 2.9s-8.8 4.7-12.4 8.1c-3.6 3.5-6.4 7.5-8.4 12.1A37.14 37.14 0 0 0 5.1 46c0 5.2.9 10.2 2.9 14.9s4.7 8.8 8.2 12.4 7.6 6.4 12.2 8.4c4.7 2 9.6 3.1 14.9 3.1l38.3.3.3-38.5c.1-5.3-.9-10.3-2.8-15zM74 77.4l-30.7-.3c-4.2 0-8.2-.9-11.9-2.5s-7-3.9-9.8-6.7A32.99 32.99 0 0 1 15 58c-1.6-3.8-2.3-7.7-2.3-11.9 0-4.3.9-8.3 2.5-12s3.9-6.9 6.7-9.7c2.9-2.8 6.2-4.9 9.9-6.5 3.8-1.6 7.7-2.3 11.9-2.3 4.3 0 8.3.9 12 2.5s6.9 3.8 9.7 6.7c2.8 2.8 4.9 6.1 6.5 9.8s2.3 7.7 2.3 12L74 77.4z"
+                />
+                <path
+                  class="A"
+                  d="M76.9 83.7c-.9 0-1.8-.3-2.5-1L27.6 35.1c-1.4-1.4-1.3-3.6 0-4.9 1.4-1.4 3.6-1.3 4.9 0l46.8 47.6c1.4 1.4 1.3 3.6 0 4.9-.6.7-1.5 1-2.4 1z"
+                />
+                <path
+                  class="A"
+                  d="M43.1 47.3c-.4 0-.8-.1-1.2-.2-1.8-.7-2.8-2.7-2.1-4.5l6.3-17.3c.7-1.8 2.7-2.8 4.5-2.1s2.8 2.7 2.1 4.5L46.4 45c-.5 1.4-1.9 2.3-3.3 2.3zm12.2 16.2H33.5C31.6 63.5 30 62 30 60c0-1.9 1.6-3.5 3.5-3.5h21.8c1.9 0 3.5 1.6 3.5 3.5 0 2-1.5 3.5-3.5 3.5zm44.1-32.4V85H88.8V31.1h10.6zm5.6 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5zm76.1-26.2c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v5.5h21.6v10.7h-21.6V85h-10.7V36.4c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.3v10.7h-5.3c-2.1 0-4.2.4-6.2 1.2zm43.2-11.9V85h-10.7V9.5h10.7zM270.5 66l7.6 7.6-3.7 3.7c-2.6 2.6-5.5 4.5-8.8 5.9s-6.7 2-10.3 2-7-.7-10.3-2c-3.3-1.4-6.2-3.3-8.8-5.9s-4.6-5.6-5.9-8.9-1.9-6.7-1.9-10.1.6-6.8 1.9-10.1 3.2-6.2 5.9-8.9c2.6-2.6 5.6-4.6 8.9-5.9s6.7-2 10.1-2 6.8.7 10.1 2 6.3 3.3 8.9 5.9l3.7 3.7L248 72.9c3 1.5 6.3 2 9.7 1.5s6.4-2.1 8.9-4.6l3.9-3.8zm-26.8-19.3c-3.2 3.2-4.8 7-4.8 11.5 0 2.5.6 4.8 1.7 7.1l10.6-10.6 6.4-6.3 4.7-4.7c-3-1.5-6.3-2-9.7-1.6-3.3.5-6.3 2.1-8.9 4.6zm64.8-15.6c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.5 5.8a27.88 27.88 0 0 1 5.8 8.5c1.4 3.2 2.1 6.7 2.1 10.5v27h-26.9c-3.7 0-7.2-.7-10.4-2.1-3.3-1.4-6.2-3.3-8.6-5.8-2.5-2.5-4.4-5.4-5.8-8.6-1.4-3.3-2.1-6.8-2.1-10.4 0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.5 6.8-2.2 10.4-2.2zm16.2 43.2V58c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.3-1.3s-4.4.4-6.4 1.3c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3s.4 4.4 1.3 6.4c.8 2 2 3.7 3.5 5.2s3.2 2.6 5.2 3.5c2 .8 4.1 1.3 6.4 1.3h16.3zm46.2-43.2v10.7h-5.4c-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.8V58c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.6zm5.3 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5z"
+                />
+              </svg>
+            </a>
+            <a class="footer__divider" href="#">개인정보취급방침</a>
+            <a class="footer__divider" href="#">이용약관</a>
+          </div>  
+          <address class="footer__address">
             <span>(주)인프랩</span>
-            <span>대표자: 이형주</span>
-            <span
-              >사업자번호: 499-81-00612
-              <a href="#">사업자 정보 확인</a></span
-            >
-            <span>통신판매업: 2018-성남분당B-0062</span>
-            <span>개인정보보호책임자: 구자유</span>
-            <span
-              >"이메일: "
+            <span class="footer__divider desktop-only">대표자: 이형주</span>
+            <span class="footer__divider desktop-only">사업자번호: 499-81-00612</span>
+            <span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=4998100612" target="_blank">사업자 정보 확인</a><i class="fas fa-chevron-down mobile-only"></i></span>
+            <br/>
+            <span class="desktop-only">통신판매업: 2018-성남분당B-0062</span>
+            <span class="footer__divider desktop-only">개인정보보호책임자: 구자유</span>
+            <span class="footer__divider desktop-only"
+              >이메일: 
               <a href="mailto:info@inflearn.com">info@inflearn.com</a></span
             >
-            <span
+            <br/>
+            <span class="footer__divider desktop-only"
               >주소: 경기도 성남시 분당구 대왕판교로 660 유스페이스1
               301-1호</span
             >
           </address>
-          <small class="copyright">© INFLAB. ALL RIGHTS RESERVED</small>
-          <ul>
-            <li>
-              <a href="#"><i></i></a>
-            </li>
-            <li>
-              <a href="#"><i></i></a>
-            </li>
-            <li>
-              <a href="#"><i></i></a>
-            </li>
-            <li>
-              <a href="#"><i></i></a>
-            </li>
-            <li>
-              <a href="#"><i></i></a>
-            </li>
-          </ul>
+          <small class="footer__copyright">©INFLAB. ALL RIGHTS RESERVED</small>
+          <div class="footer__sns desktop-only">
+            <a href="https://post.naver.com/inflearn" target="_blank"><i class="text">N</i></a>
+            <a href="https://blog.naver.com/inflearn" target="_blank"><i class="text">B</i></a>
+            <a href="https://www.instagram.com/inflearn__official" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UC0Y0T9JpgIBbyGDjvy9PbOg" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inflearn" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          </div>
         </div>
       </div>
     </footer>

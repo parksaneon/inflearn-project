@@ -127,7 +127,6 @@
     border: 1px solid $review-gray;
     box-shadow: rgb(0 10 18 / 10%) 0px 2px 3px, rgb(0 10 18 / 10%) 0px 0px 0px 1px;
     border-radius: 4px;
-
     @include mobile {
       width: auto;
     }
@@ -161,7 +160,6 @@
       @include textEllipsis;
     }
   }
-
   &__content {
     margin-top: rem(15px);
     font-size: rem(16px);
@@ -175,7 +173,7 @@
 
 // 공유배너 section
 .banner {
-  background: url(./../images/인프런/share-you.jpg) no-repeat 50% 50%;
+  background: url(./../images/share-you.jpg) no-repeat 50% 50%;
   background-size: cover;
   width: 100vw;
   position: relative;
@@ -477,7 +475,6 @@
     @include flexbox($items: center);
     font-weight: 700;
     margin-bottom: rem(8px);
-
     @include mobile {
       justify-content: center;
     }

@@ -42,6 +42,7 @@
   &.open-nav {
     .header-container__nav {
       transform: translateX(0%);
+      opacity: 1;
     }
   }
 
@@ -97,6 +98,7 @@
       @include mobile {
         position: fixed;
         width: 316px;
+        opacity: 0;
         transform: translateX(-100%);
         top: 0;
         left: 0;

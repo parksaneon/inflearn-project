@@ -5,7 +5,6 @@ function modalControll(opens, closes, modals) {
 
   open.addEventListener('click', function () {
     if (modals === '.modal') {
-      console.log(modals);
       setTimeout(function () {
         document.getElementById('id').focus();
       }, 2);

@@ -141,6 +141,8 @@
         right: 0;
         top: 50px;
         background-color: #fff;
+        // pointer-events: none;
+        // opacity: 0;
         display: none;
         position: absolute;
         box-shadow: 8px 5px 8px 1px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%);
@@ -148,6 +150,8 @@
         z-index: 10;
 
         &.open {
+          // pointer-events: auto;
+          // opacity: 1;
           display: block;
         }
 
@@ -183,12 +187,6 @@
 
           ul {
             transform: translateX(100%);
-          }
-
-          li:hover {
-            ul {
-              opacity: 1;
-            }
           }
 
           @include mobile {
@@ -239,12 +237,6 @@
         > a:hover {
           font-weight: 700;
           color: $inflearn-green;
-        }
-
-        &:hover {
-          > ul {
-            display: block;
-          }
         }
 
         &:first-child ul {

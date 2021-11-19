@@ -31,11 +31,14 @@
   .commercial-slogan {
     position: relative;
     @include flexbox($direction: column, $justify: center);
+    // flex-basis: 256px;
+    flex-shrink: 0;
     @include mobile {
       position: absolute;
       bottom: 0;
       left: 10px;
       z-index: 10;
+      align-items: flex-start;
     }
 
     &__tag {

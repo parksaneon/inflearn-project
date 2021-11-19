@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const removeOpen = () => {
-    document.querySelectorAll('.open').forEach((openMenu) => openMenu.classList.remove('open'));
+    document.querySelectorAll('.open').forEach((openMenu) => {
+      openMenu.setAttribute('aria-hidden', true);
+      openMenu.classList.remove('open');
+    });
   };
 
   // header focus
@@ -43,6 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
       removeOpen();
       focused = e.target.nextElementSibling ? e.target : null;
     });
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && focused && focused.nextElementSibling && window.innerWidth > 1000) {
+      removeOpen();
+      focused.nextElementSibling.classList.add('open');
+      focused.nextElementSibling.querySelector('a:first-child').focus();
+      focused = null;
+    } else if (e.key === 'Shift') {
+      prevKey = 'Shift';
+    } else if (e.key === 'Tab') {
+      focusDist = prevKey === 'Shift' ? 'prev' : 'next';
+      prevKey = null;
+    }
   });
 
   headerSubList.forEach((submenu) => {
@@ -58,8 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     subLinks.forEach((oneLink) => {
       oneLink.addEventListener('mouseover', (e) => {
-        removeOpen();
         openSub = true;
+
+        if (e.target.parentNode.parentNode.querySelector('.open'))
+          e.target.parentNode.parentNode.querySelector('.open').classList.remove('open');
+
         if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
       });
     });
@@ -80,20 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && focused && focused.nextElementSibling && window.innerWidth > 1000) {
-      removeOpen();
-      focused.nextElementSibling.classList.add('open');
-      focused.nextElementSibling.querySelector('a:first-child').focus();
-      focused = null;
-    } else if (e.key === 'Shift') {
-      prevKey = 'Shift';
-    } else if (e.key === 'Tab') {
-      focusDist = prevKey === 'Shift' ? 'prev' : 'next';
-      prevKey = null;
-    }
-  });
-
   heaederList.addEventListener('mouseleave', (e) => {
     removeOpen();
   });
@@ -101,7 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
   headerLinks.forEach((link) => {
     link.addEventListener('mouseover', (e) => {
       removeOpen();
-      if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('open');
+      if (e.target.nextElementSibling) {
+        e.target.nextElementSibling.setAttribute('aria-hidden', false);
+        e.target.nextElementSibling.classList.add('open');
+      }
     });
   });
 });

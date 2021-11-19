@@ -56,3 +56,8 @@ html과 css를 사용해서 인프런 클론 코딩 프로젝트를 진행했다
 ## 사용기술
 
 - sass, postcss, webpack
+
+## 결과
+
+![](https://github.com/parksaneon/inflearn-project/blob/develop/src/images/md/20211119_091809.png)
+![](https://github.com/parksaneon/inflearn-project/blob/develop/src/images/md/20211119_091925.png)
